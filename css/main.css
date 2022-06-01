@@ -16,49 +16,155 @@
     margin: auto;
 }
 
+
+
 .h1 {
     display: flex;
 }
 
 .h2 {
+    margin: 5px 0;
     display: flex;
+}
+
+.h3 {
+    display: flex;
+    margin: 5px 0;
+}
+
+.p1 {
+    margin-left: 70px;
+    font-size: 10px;
+    color: #ADA4A5;
 }
 
 .pin {
     margin-top: 25px;
-
+    margin-left: 3px;
+    
 }
 
 select {
-    padding: 12px 80px;
+    padding: 12px 75px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 12px;
   box-sizing: border-box;
-    margin-left: 20px;
+    margin-left: 18px;
+    color: #ADA4A5;
 }
 
-input[type=text] {
-    /* width: 100%; */
-  padding: 8px 15px;
+.weigt_input {
+    width: 20px; 
+  padding: 12px 12px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 12px;
   /* box-sizing: border-box; */
   margin-left: 14px;
+  font-size: 13px;
+  color: #ADA4A5;
 }
 
-.logoWeight {
-    margin-top: 15px;
+.di_1 {
+    width: 23px; 
+  padding: 12px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  /* box-sizing: border-box; */
+  margin-left: 14px;
+  font-size: 10px;
+  color: #ADA4A5;
+}
+
+.di_2 {
+    width: 23px; 
+  padding: 12px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  /* box-sizing: border-box; */
+  margin-left: 10px;
+  font-size: 10px;
+  color: #ADA4A5;
+}
+
+.di_3 {
+    width: 23px; 
+  padding: 12px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  /* box-sizing: border-box; */
+  margin-left: 10px;
+  font-size: 10px;
+  color: #ADA4A5;
+}
+
+/* input[type=text] {
+    width: 20px; 
+  padding: 12px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  /* box-sizing: border-box; */
+  /* margin-left: 14px; */
+  /* font-size: 10px; */
+/* }  */
+
+.logoweight {
+    margin-top: 20px;
+    
 }
 
 img {
     margin-left: 20px;
-    padding: 1px 5px;
+    /* padding: 1px 5px; */
 }
 
+.picKG {
+    /* margin-top: 3px; */
+    margin-left: 10px;
+}
+
+.form_2{
+    display: flex;
+    /* margin-left: px; */
+    /* margin-bottom: 20px; */   
+}
+
+.picCM {
+    margin-top: 15px;
+    margin-left: 9px;
+    margin-left: 9px;
+}
+
+.dimensionbox {
+    margin-top: 23px;
+}
+
+.caption {
+    text-align: center;
+}
+
+.h1-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.h2-text {
+    font-size: 12px;
+    font-weight: normal;
+    color: #D7D7D7;
+}
 
 
 body {
