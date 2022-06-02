@@ -52,27 +52,40 @@
 }
 
 select {
-    padding: 12px 90px;
+    padding: 12px 93px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 12px;
   box-sizing: border-box;
-    margin-left: 5px;
+    margin-left: 41px;
     color: #ADA4A5;
+    /* icon */
+    /* padding-left: 25px; */
+  background: url("https://www.img.in.th/images/eac1fa5530686c0c6006f41c4b754404.png") no-repeat left;
+  background-size: 28px;
+  background-position-x: 5px;
+  background-color: white;
 }
 
 .weigt_input {
     /* width: 20px;  */
-  padding: 12px 30px;
+  padding: 12px 38px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 12px;
   /* box-sizing: border-box; */
-  /* margin-left: px; */
+  margin-left: 42px;
   font-size: 13px;
   color: #ADA4A5;
+  text-align: center;
+  /* icon */
+  padding-left: 25px;
+  background: url("https://www.img.in.th/images/2a0430ad572bfde151ecbabef9e3bb99.png") no-repeat left;
+  background-size: 28px;
+  background-position-x: 5px;
+  background-color: white;
 }
 
 .di_1 {
@@ -145,14 +158,14 @@ img {
 
 .form_2{
     display: flex;
-    /* margin-left: px; */
+    margin-left: 33px;
     /* margin-bottom: 20px; */   
 }
 
 .picCM {
     margin-top: 15px;
-    margin-left: 9px;
-    margin-left: 9px;
+    margin-left: 12px;
+    
 }
 
 .dimensionbox {
@@ -163,7 +176,7 @@ img {
 
 .caption {
     text-align: center;
-    margin-left: -30px;
+    margin-left: -25px;
 }
 
 .h1-text {
@@ -181,18 +194,34 @@ img {
 
 
 button {
+   
     display: flex;
     margin: auto; 
-    padding: 10px 110px;
-    margin-left: 45px;
+    padding: 15px 110px;
+    margin-left: 25px;
     display: inline-block;
-    border: 1px solid #9DCEFF;
+    border: 1px solid #92A3FD;
     border-radius: 12px;
     /* background-color: linear-gradient( rgb(146, 163, 253) 100%, rgb(157, 206, 255) 100%); */
     background-color: #92A3FD;
     /* background-color: #9DCEFF; */
+    /* transition-duration: 0.4s;  */
     
     
+}
+
+.button:hover { 
+    background-color: #144266; 
+    color: white; 
+   }
+
+   
+   
+.icon {
+    padding: 10px;
+    color: green;
+    min-width: 50px;
+    text-align: center;
 }
 
 
@@ -207,7 +236,7 @@ body {
     /* FF3.6-15 */
     background: -webkit-linear-gradient(180deg, rgba(20,66,102,1) 35%, rgba(20,66,102,0) 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(180deg, rgba(20,66,102,1) 35%, rgba(20,66,102,0) 90%);
+    background: linear-gradient(180deg, rgba(20,66,102,1) 45%, rgba(20,66,102,0) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     /* IE6-9 fallback on horizontal gradient */
     
