@@ -37,7 +37,6 @@
 .h2 {
     margin: 5px 0;
     display: flex;
-    /* margin-left: 10px; */
 }
 
 .h3 {
@@ -70,7 +69,6 @@ select {
     margin-left: 41px;
     color: #ADA4A5;
     /* icon */
-    /* padding-left: 25px; */
   background: url("https://www.img.in.th/images/eac1fa5530686c0c6006f41c4b754404.png") no-repeat left;
   background-size: 28px;
   background-position-x: 5px;
@@ -78,13 +76,11 @@ select {
 }
 
 .weigt_input {
-    /* width: 20px;  */
   padding: 12px 38px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 12px;
-  /* box-sizing: border-box; */
   margin-left: 40px;
   font-size: 13px;
   color: #ADA4A5;
@@ -104,7 +100,6 @@ select {
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 12px;
-  /* box-sizing: border-box; */
   margin-left: 10px;
   font-size: 10px;
   color: #ADA4A5;
@@ -117,7 +112,6 @@ select {
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 12px;
-  /* box-sizing: border-box; */
   margin-left: 10px;
   font-size: 10px;
   color: #ADA4A5;
@@ -130,23 +124,10 @@ select {
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 12px;
-  /* box-sizing: border-box; */
   margin-left: 10px;
   font-size: 10px;
   color: #ADA4A5;
 }
-
-/* input[type=text] {
-    width: 20px; 
-  padding: 12px 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  /* box-sizing: border-box; */
-  /* margin-left: 14px; */
-  /* font-size: 10px; */
-/* }  */
 
 .logoweight {
     margin-top: 22px;
@@ -157,18 +138,15 @@ select {
 
 img {
     margin-left: 20px;
-    /* padding: 1px 5px; */
 }
 
 .picKG {
-    /* margin-top: 3px; */
     margin-left: 13px;
 }
 
 .form_2{
     display: flex;
     margin-left: 33px;
-    /* margin-bottom: 20px; */   
 }
 
 .picCM {
@@ -185,7 +163,6 @@ img {
 
 .caption {
     text-align: center;
-    /* margin-left: -10px; */
     margin-right: -10px;
 }
 
@@ -208,16 +185,10 @@ button {
     display: flex;
     margin: auto; 
     padding: 15px 110px;
-    /* margin-left: 8px; */
     display: inline-block;
     border: 1px solid #92A3FD;
     border-radius: 12px;
-    /* background-color: linear-gradient( rgb(146, 163, 253) 100%, rgb(157, 206, 255) 100%); */
     background-color: #92A3FD;
-    /* background-color: #9DCEFF; */
-    /* transition-duration: 0.4s;  */
-    
-    
 }
 
 .button:hover { 
@@ -254,44 +225,16 @@ body {
     letter-spacing: 1px;
 }
 
+/* PAGE : result.html */
 
-/* h1 {
-    i {
-        position: relative;
-        font-size: 70px;
-    }
-    text-align: center;
-    color: #fff;
-    font-weight: 600;
-    font-size: 3em;
-    letter-spacing: 0px;
-    text-shadow: 1px 1px rgba(0,
-    0,
-    0,
-    0.02),
-    2px 2px rgba(0,
-    0,
-    0,
-    0.02),
-    3px 3px rgba(0,
-    0,
-    0,
-    0.02),
-    4px 4px rgba(0,
-    0,
-    0,
-    0.02),
-    5px 5px rgba(0,
-    0,
-    0,
-    0.02),
-    6px 6px rgba(0,
-    0,
-    0,
-    0.02),
-    7px 7px rgba(0,
-    0,
-    0,
-    0.02);
-} */
+.resultText {
+    width: 180px;
+  border: 15px solid #FFFFFF;
+  padding: 50px ;
+  margin: 20px;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+
+}
+
 

@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPL-Price Check</title>
-
+    <script src="js/cal.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
-
 
     <header>
 
@@ -20,92 +20,90 @@
         <div class="contrainer">
 
             <img class="logo" src="img/CPL-Logo.svg">
-
+            <div id="HH"></div>
             <div class="contrainer2">
-                
+
                 <div class="h1">
-                    <!-- <div class="pin">
-                        <img src="img/pin.svg">
-                    </div> -->
-    
+                    
+
                     <div class="slectcountry">
-    
-                        <!-- <img src="img/pin.svg" alt=""> -->
-    
+
+
                         <select id="country" name="country">
-    
+
                             <option value="au">Australia</option>
                             <option value="ca">Canada</option>
                             <option value="usa">USA</option>
                         </select>
                     </div>
-    
+
                 </div>
-    
+
                 <div class="h2">
-    
-                    <!-- <img class="logoweight" src="img/weight-1.svg" width="20" height="20"> -->
-    
-    
+
+
+
                     <div class="weight">
-                        <!-- <img src="img/weight-scale 1.svg" alt=""> -->
-    
+
                         <form>
-    
+
                             <input class="weigt_input" type="text" id="weight" name="weight" placeholder="น้ำหนัก"
                                 style="width: 140px;">
                         </form>
-    
-                        <!-- <img src="img/btn-KG.svg" alt=""> -->
+
                     </div>
-    
-    
+
+
                     <img class="picKG" src="img/btn-KG.svg">
-    
+
                 </div>
-    
-    
-    
+
+
+
                 <div class="h3">
                     <div class="dimention">
                         <div class="p1">
                             <p>ขนาดพัสดุ (ถ้ามี)</p>
                         </div>
-                        <!-- <img src="img/dimensio-box.svg" width="20" height="20" > -->
-    
+
                         <form class="form_2">
-    
-                            <!-- <img class="dimensionbox" src="img/dimensio-box.svg" width="20" height="20"> -->
+
                             <input class="di_1" type="text" id="width" name="width" placeholder="กว้าง">
                             <input class="di_2" type="text" id="lenght" name="lenght" placeholder="ยาว">
                             <input class="di_3" type="text" id="height" name="height" placeholder="สูง">
                         </form>
-    
-                        <!-- <img src="img/btn-CM.svg" alt=""> -->
+
+                        
                     </div>
-    
-    
+
+
                     <img class="picCM" src="img/btn-CM.svg">
-    
-    
+
+
                 </div>
-    
+
                 <br>
                 <div class="caption">
                     <h1 class="h1-text">ส่งของไปต่างประเทศ</h1>
                     <h2 class="h2-text">กลายเป็นเรื่องง่ายสำหรับคุณ</h2>
                 </div>
                 <br>
-                <button class="button" style="color: white ;">คำนวณราคา</button>
 
+                <button class="button" id="btn_1" type="submit" onclick="myFunction()"
+                    style="color: white ;">คำนวณราคา</button>
+
+                <br>
+                <br>
+                
             </div>
 
-            
 
+            <p id="result"></p>
 
         </div>
     </header>
 
+  
 </body>
 
 </html>
