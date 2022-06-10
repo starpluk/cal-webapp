@@ -16,10 +16,22 @@
         <img class="logo" src="img/CPL-Logo.svg">
 
         <div class="resultBox">
-            <h1 class="rateResult">ราคา : &nbsp;</h1>
+            
+            <div class="price">
+                <h1 class="rateResult">ราคา : &nbsp;</h1>
            <div class="resultText"></div>
-            &nbsp; บาท
+            &nbsp;
+            <div class="Bath">บาท</div> 
+            </div>
+        
+            <br>
+            <div class="countryResult"></div>
+            <br>
+            <div class="ExOrImResult"></div>
+            <br>
+            <div class="Status"></div>
         </div>
+       
 
 
         
@@ -37,6 +49,9 @@
             
             // get value from storage
             $(".resultText").html( sessionStorage.getItem("resultText"));
+            $(".countryResult").html( sessionStorage.getItem("countryResult"));
+            $(".ExOrImResult").html( sessionStorage.getItem("ExOrImResult"));
+            $(".Status").html( sessionStorage.getItem("Status"));
             
             // button click
             // $("#btnClear").click(function(){		

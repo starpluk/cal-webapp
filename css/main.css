@@ -28,6 +28,13 @@
     margin-left: 5px;
 }
 
+.radioBTN {
+    display: flex;
+    margin-left: 50px;
+    font-size: 13px;
+    color: #ADA4A5;
+}
+
 
 
 .h1 {
@@ -228,7 +235,7 @@ body {
 /* PAGE : result.html */
 
 .resultBox {
-    display: flex;
+    /* display: flex; */
     width: 180px;
   border: 15px solid #FFFFFF;
   padding: 50px ;
@@ -245,4 +252,7 @@ body {
     
 }
 
+.price {
+    display: flex;
+}
 
