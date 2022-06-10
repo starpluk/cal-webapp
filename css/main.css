@@ -227,14 +227,22 @@ body {
 
 /* PAGE : result.html */
 
-.resultText {
+.resultBox {
+    display: flex;
     width: 180px;
   border: 15px solid #FFFFFF;
   padding: 50px ;
   margin: 20px;
   border-radius: 12px;
   background-color: #FFFFFF;
+  font-weight: bold;  
 
+}
+
+.rateResult {
+    font-size: medium;
+    font-weight: bold;
+    
 }
 
 
