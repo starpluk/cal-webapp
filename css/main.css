@@ -237,17 +237,20 @@ body {
 .resultBox {
     /* display: flex; */
     width: 180px;
-  border: 15px solid #FFFFFF;
+  border: 15px solid #D7D7D7;
   padding: 50px ;
   margin: 20px;
   border-radius: 12px;
-  background-color: #FFFFFF;
+  background-color: #D7D7D7;
   /* font-weight: bold;   */
+  
+  /* background: linear-gradient(180deg, rgba(240, 143, 51,1) 45%, rgba(248, 207, 171,1) 100%); */
+  
 
 }
 
 .countryResult {
-    font-size: 25px;
+    font-size: 30px;
     margin-top: -50px;
     font-weight: bold;
     /* margin-left: -80px; */
@@ -281,13 +284,16 @@ body {
 }
 
 .rateResult {
-    font-size: medium;
-    font-weight: bold;
+    display: flex;
+    margin-left: -30px;
+    font-size: 15px;
+    font-weight: medium;
     
 }
 
 .price {
     display: flex;
+    margin-left: 20px;
     font-size: 30px;
 }
 
@@ -295,3 +301,4 @@ body {
     margin-top: 10px;
     font-size: 20px;
 }
+
