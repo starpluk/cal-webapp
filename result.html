@@ -14,22 +14,37 @@
 <body>
     <div class="contrainer">
         <img class="logo" src="img/CPL-Logo.svg">
-
+        
         <div class="resultBox">
             
+            <div class="countryResult"></div>
+
+            <br>
+
+            <div class="shipping">
+                การขนส่ง : &nbsp;
+            <div class="shippingResult"></div>
+            </div>
+            
+
+            <div class="weightResult">
+                    น้ำหนัก : &nbsp;
+                <div class="weightKG"></div>
+                <div class="KGtext">&nbsp;Kg.</div>
+                
+            </div>
+            
+            <br><br>
+            
+            <!-- <div class="Status"></div> -->
+            <h1 class="rateResult">ราคาค่าขนส่ง</h1>
             <div class="price">
-                <h1 class="rateResult">ราคา : &nbsp;</h1>
+                
            <div class="resultText"></div>
-            &nbsp;
+            &nbsp;&nbsp;&nbsp;
             <div class="Bath">บาท</div> 
             </div>
         
-            <br>
-            <div class="countryResult"></div>
-            <br>
-            <div class="ExOrImResult"></div>
-            <br>
-            <div class="Status"></div>
         </div>
        
 
@@ -50,8 +65,9 @@
             // get value from storage
             $(".resultText").html( sessionStorage.getItem("resultText"));
             $(".countryResult").html( sessionStorage.getItem("countryResult"));
-            $(".ExOrImResult").html( sessionStorage.getItem("ExOrImResult"));
+            $(".shippingResult").html( sessionStorage.getItem("shippingResult"));
             $(".Status").html( sessionStorage.getItem("Status"));
+            $(".weightKG").html( sessionStorage.getItem("weightKG"));
             
             // button click
             // $("#btnClear").click(function(){		

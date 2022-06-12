@@ -7,7 +7,7 @@ function myFunction() {
     var country,weightKG,widht,lenght,height,kg,dimention;
     // var usaRate = 1500;
     var valurRate;
-    var ExOrIm;
+    var shipping;
     var text,country_1,exim;
     var status;
 
@@ -16,11 +16,17 @@ function myFunction() {
     widht = document.getElementById("width").value;
     lenght = document.getElementById("lenght").value;
     height = document.getElementById("height").value;
-    exim = document.getElementById("exim").value;
+    // exim = document.getElementById("exim").value;
     
+    if (document.getElementById('export').checked == true){
+        shipping = "ส่งออก";
+    }
+    else if(document.getElementById('import').checked == true){
+        shipping = "นำเข้า";
+    }
+
     country_1 = country;
     kg =weightKG;
-    ExOrIm = exim;
     dimention = (widht*lenght*height)/5000;
 
     if(dimention > kg){
@@ -36,10 +42,10 @@ function myFunction() {
     else{
         text = "";
     }
-   
-    sessionStorage.setItem("resultText",text);
+    sessionStorage.setItem("weightKG",kg);
+    sessionStorage.setItem("resultText",addCommas(text));
     sessionStorage.setItem("countryResult",country_1);
-    sessionStorage.setItem("ExOrImResult",ExOrIm);
+    sessionStorage.setItem("shippingResult",shipping);
     sessionStorage.setItem("Status",status);
    
     window.location.replace('result.html');

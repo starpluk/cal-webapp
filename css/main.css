@@ -242,8 +242,42 @@ body {
   margin: 20px;
   border-radius: 12px;
   background-color: #FFFFFF;
-  font-weight: bold;  
+  /* font-weight: bold;   */
 
+}
+
+.countryResult {
+    font-size: 25px;
+    margin-top: -50px;
+    font-weight: bold;
+    /* margin-left: -80px; */
+}
+
+.shipping {
+    display: flex;
+    font-size: 13px;
+    margin-left: -30px;
+    font-weight: medium;
+}
+
+.shippingResult {
+    display: flex;
+    font-weight: bold;
+}
+
+.weightResult {
+    display: flex;
+    font-size: 13px;
+    margin-left: -30px;
+    font-weight: medium;
+}
+
+.weightKG {
+    font-weight: bold;
+}
+
+.KGtext {
+    font-weight: bold;
 }
 
 .rateResult {
@@ -254,5 +288,10 @@ body {
 
 .price {
     display: flex;
+    font-size: 30px;
 }
 
+.Bath {
+    margin-top: 10px;
+    font-size: 20px;
+}
