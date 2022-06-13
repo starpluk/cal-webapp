@@ -25,8 +25,9 @@
 
                 <div class="radioBTN">
                 
-                    <input type="radio" name="exim" id="export" value="export">ส่งออก<br>
-                    <input type="radio" name="exim" id="import" value="import">นำเข้า<br>
+                    <input type="radio" name="exim" id="export" value="export">&nbsp;ส่งออก
+                    &nbsp;&nbsp;
+                    <input type="radio" name="exim" id="import" value="import">&nbsp;นำเข้า
 
                     <!-- <input type="radio" class="input-1" name="exim" value="ส่งออก" >
                     <label for="exportText">&nbsp;ส่งออก</label> -->
@@ -107,6 +108,8 @@
 
                 <br>
                 <br>
+                <button class="liffBtn" id="btn_liff" onclick="sendMsg()"> Liff SendMSG</button>
+                <br>
                 
             </div>
 
@@ -115,8 +118,15 @@
 
         </div>
     </header>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
-  
+  <script>
+
+    async function main() {
+        await liff.init({ liffId : "1657164311-azkL1eY2"})
+    }
+
+</script>
 </body>
 
 </html>

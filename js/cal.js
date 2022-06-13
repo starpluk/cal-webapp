@@ -69,6 +69,19 @@ function addCommas(nStr){
     return x1 + x2;
   }
 
+async function sendMsg(){
+    if (liff.getContext().type !== "none"){
+        await liff.sendMessages([
+            {
+                "type" : "sticker",
+                "stickerId" : 1,
+                "packageId" : 1
+            }
+        ])
+        alert("Message Sent")
+    }
+}
+
 // function ExUsaRate(rate){
 //     text = this.rate*1500;
 //     return text;
