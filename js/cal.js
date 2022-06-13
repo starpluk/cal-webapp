@@ -70,12 +70,11 @@ function addCommas(nStr){
   }
 
 async function sendMsg(){
-    if (liff.getContext().type !== "none"){
+    if (liff.getContext().type !== "none" && liff.getContext().type !== "external"){
         await liff.sendMessages([
             {
-                "type" : "sticker",
-                "stickerId" : 1,
-                "packageId" : 1
+                "type": "text",
+                "text": "Hello, world"
             }
         ])
         alert("Message Sent")
