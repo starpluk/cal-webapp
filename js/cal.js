@@ -81,6 +81,10 @@ function sendMsg(){
     }
 }
 
+function sendMsgAlert(){
+    alert("msg send");
+}
+
 // function ExUsaRate(rate){
 //     text = this.rate*1500;
 //     return text;
