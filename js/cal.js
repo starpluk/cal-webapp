@@ -70,15 +70,15 @@ function addCommas(nStr){
   }
 
 function sendMsg(){
-    if (liff.getContext().type !== "none" && liff.getContext().type !== "external"){
+    
         liff.sendMessages([
             {
                 "type": "text",
                 "text": "Hello, world"
             }
-        ])
-        alert("Message Sent")
-    }
+        ]);
+        alert("Message Sent");
+    
 }
 
 function sendMsgAlert(){
