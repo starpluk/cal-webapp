@@ -69,9 +69,9 @@ function addCommas(nStr){
     return x1 + x2;
   }
 
-async function sendMsg(){
+function sendMsg(){
     if (liff.getContext().type !== "none" && liff.getContext().type !== "external"){
-        await liff.sendMessages([
+        liff.sendMessages([
             {
                 "type": "text",
                 "text": "Hello, world"
