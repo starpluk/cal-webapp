@@ -122,6 +122,19 @@
   
 
   <script>
+    async function sendMsg(){
+    if(liff.getContext().type !== "none"){
+        await liff.sendMessages([
+            {
+                "type": "text",
+                "text": "Hello, world"
+            }
+        ])
+        alert("Message Sent")
+    }
+        
+    
+    }
 
    async function main() {
        await liff.init({ liffId : "1657243570-XQJOapJN"})
