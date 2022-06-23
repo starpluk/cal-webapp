@@ -3,7 +3,7 @@ var country,weightKG,widht,lenght,height,kg,dimention;
 var valurRate;
 var shipping;
 var text,country_1,exim;
-
+<script src="้https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
 
 function myFunction() {
