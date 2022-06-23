@@ -3,7 +3,6 @@ var country,weightKG,widht,lenght,height,kg,dimention;
 var valurRate;
 var shipping;
 var text,country_1,exim;
-<script src="้https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
 
 function myFunction() {
@@ -73,45 +72,45 @@ function addCommas(nStr){
 ///////// LIFF Function ///////////
 ///////////////////////////////////
 
-function getContext() {
-    if (liff.getContext() != null) {
-      liff.getContext().type
-      liff.getContext().viewType
-      liff.getContext().utouId
-      liff.getContext().roomId
-      liff.getContext().groupId
-    }
-  }
+// function getContext() {
+//     if (liff.getContext() != null) {
+//       liff.getContext().type
+//       liff.getContext().viewType
+//       liff.getContext().utouId
+//       liff.getContext().roomId
+//       liff.getContext().groupId
+//     }
+//   }
 
-async function getUserProfile() {
-    const profile = await liff.getProfile()
-    UserID = profile.userId
-    UserEmail = liff.getDecodedIDToken().email
-  }
+// async function getUserProfile() {
+//     const profile = await liff.getProfile()
+//     UserID = profile.userId
+//     UserEmail = liff.getDecodedIDToken().email
+//   }
 
-async function sendMsg() {
-    if (liff.getContext().type !== "none") {
-      await liff.sendMessages([
-        {
-          "type": "sticker",
-          "stickerId": 1,
-          "packageId": 1
-        }
-      ])
-      alert("Message sent")
-    }
-  }
+// async function sendMsg() {
+//     if (liff.getContext().type !== "none") {
+//       await liff.sendMessages([
+//         {
+//           "type": "sticker",
+//           "stickerId": 1,
+//           "packageId": 1
+//         }
+//       ])
+//       alert("Message sent")
+//     }
+//   }
 
-async function main() {
-    liff.ready.then(() => {
-      liff.isLoggedIn()
-      if (liff.isLoggedIn()) {
-        getEnvironment()
-        getUserProfile()
-        getContext()
-      } else {
-        liff.login()
-      }
-    })
-    await liff.init({ liffId: "1657243570-NkrPBqrJ" })
-  }
+// async function main() {
+//     liff.ready.then(() => {
+//       liff.isLoggedIn()
+//       if (liff.isLoggedIn()) {
+//         getEnvironment()
+//         getUserProfile()
+//         getContext()
+//       } else {
+//         liff.login()
+//       }
+//     })
+//     await liff.init({ liffId: "1657243570-NkrPBqrJ" })
+//   }

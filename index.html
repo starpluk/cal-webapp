@@ -9,7 +9,7 @@
     <script src="cal.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="้https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    
 </head>
 
 <body>
@@ -120,8 +120,51 @@
         </div>
     </header>
   
+    <script src="้https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
     <script>
+    function getContext() {
+    if (liff.getContext() != null) {
+      liff.getContext().type
+      liff.getContext().viewType
+      liff.getContext().utouId
+      liff.getContext().roomId
+      liff.getContext().groupId
+    }
+  }
+
+async function getUserProfile() {
+    const profile = await liff.getProfile()
+    UserID = profile.userId
+    UserEmail = liff.getDecodedIDToken().email
+  }
+
+async function sendMsg() {
+    if (liff.getContext().type !== "none") {
+      await liff.sendMessages([
+        {
+          "type": "sticker",
+          "stickerId": 1,
+          "packageId": 1
+        }
+      ])
+      alert("Message sent")
+    }
+  }
+
+async function main() {
+    // liff.ready.then(() => {
+    //   liff.isLoggedIn()
+    //   if (liff.isLoggedIn()) {
+    //     // getEnvironment()
+    //     getUserProfile()
+    //     getContext()
+    //   } else {
+    //     liff.login()
+    //   }
+    // })
+    await liff.init({ liffId: "1657243570-NkrPBqrJ" })
+  }
     main()
     </script>
 </body>
