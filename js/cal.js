@@ -1,14 +1,13 @@
-
+var UserID,UserEmail;
+var country,weightKG,widht,lenght,height,kg,dimention;
+var valurRate;
+var shipping;
+var text,country_1,exim;
 
 
 
 function myFunction() {
-    
-    var country,weightKG,widht,lenght,height,kg,dimention;
-    // var usaRate = 1500;
-    var valurRate;
-    var shipping;
-    var text,country_1,exim;
+
     var status;
 
     country = document.getElementById("country").value;
@@ -69,31 +68,50 @@ function addCommas(nStr){
     return x1 + x2;
   }
 
-async function sendMsg(){
-    if(liff.getContext().type !== "none"){
-        await liff.sendMessages([
-            {
-                "type": "text",
-                "text": "Hello, world"
-            }
-        ])
-        alert("Message Sent")
+
+///////////////////////////////////
+///////// LIFF Function ///////////
+///////////////////////////////////
+
+function getContext() {
+    if (liff.getContext() != null) {
+      liff.getContext().type
+      liff.getContext().viewType
+      liff.getContext().utouId
+      liff.getContext().roomId
+      liff.getContext().groupId
     }
-        
-    
-}
+  }
 
-function sendMsgAlert(){
-    alert("msg send");
-}
+async function getUserProfile() {
+    const profile = await liff.getProfile()
+    UserID = profile.userId
+    UserEmail = liff.getDecodedIDToken().email
+  }
 
-// function ExUsaRate(rate){
-//     text = this.rate*1500;
-//     return text;
-// }
+async function sendMsg() {
+    if (liff.getContext().type !== "none") {
+      await liff.sendMessages([
+        {
+          "type": "sticker",
+          "stickerId": 1,
+          "packageId": 1
+        }
+      ])
+      alert("Message sent")
+    }
+  }
 
-// function ImUsaRate(rate){
-//     text = this.rate*1500;
-//     return text;
-// }
-
+async function main() {
+    liff.ready.then(() => {
+      liff.isLoggedIn()
+      if (liff.isLoggedIn()) {
+        getEnvironment()
+        getUserProfile()
+        getContext()
+      } else {
+        liff.login()
+      }
+    })
+    await liff.init({ liffId: "1657243570-NkrPBqrJ" })
+  }
