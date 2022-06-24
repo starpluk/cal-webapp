@@ -169,108 +169,107 @@ async function sendMsg() {
     if (liff.getContext().type !== "none") {
       await liff.sendMessages([
         {
-                "type": "flex",
-                "altText": "Flex Message",
-                "contents": {
-                  "type": "bubble",
-                  "direction": "ltr",
-                  "hero": {
-                    "type": "image",
-                    "url": "https://www.img.in.th/images/8101764dd39238f4e26d8110cd237fae.png",
-                    "size": "5xl",
-                    "aspectRatio": "1.51:1",
-                    "aspectMode": "fit"
-                  },
-                  "body": {
+            "type": "flex",
+            "altText": "Flex Message",
+            "contents": {
+              "type": "bubble",
+              "direction": "ltr",
+              "hero": {
+                "type": "image",
+                "url": "https://www.img.in.th/images/8101764dd39238f4e26d8110cd237fae.png",
+                "size": "5xl",
+                "aspectRatio": "1.51:1",
+                "aspectMode": "fit"
+              },
+              "body": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
                     "type": "box",
-                    "layout": "vertical",
+                    "layout": "horizontal",
                     "contents": [
                       {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                          {
-                            "type": "text",
-                            "text": "Import / Export :",
-                            "weight": "bold",
-                            "contents": []
-                          },
-                          {
-                            "type": "text",
-                            "text": "ส่งออก",
-                            "align": "end",
-                            "contents": []
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Import / Export :",
+                        "weight": "bold",
+                        "contents": []
                       },
                       {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                          {
-                            "type": "text",
-                            "text": "Country : ",
-                            "weight": "bold",
-                            "contents": []
-                          },
-                          {
-                            "type": "text",
-                            "text": "australia",
-                            "align": "end",
-                            "contents": []
-                          }
-                        ]
+                        "type": "text",
+                        "text": "ส่งออก",
+                        "align": "end",
+                        "contents": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "Country : ",
+                        "weight": "bold",
+                        "contents": []
                       },
                       {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "contents": [
-                          {
-                            "type": "text",
-                            "text": "น้ำหนัก :",
-                            "weight": "bold",
-                            "contents": []
-                          },
-                          {
-                            "type": "text",
-                            "text": " Kg.",
-                            "align": "end",
-                            "contents": []
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Australia",
+                        "align": "end",
+                        "contents": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "น้ำหนัก :",
+                        "weight": "bold",
+                        "contents": []
                       },
                       {
-                        "type": "box",
-                        "layout": "horizontal",
-                        "margin": "xxl",
-                        "contents": [
-                          {
-                            "type": "spacer"
-                          },
-                          {
-                            "type": "text",
-                            "text": "20",
-                            "weight": "bold",
-                            "size": "3xl",
-                            "align": "center",
-                            "contents": []
-                          },
-                          {
-                            "type": "text",
-                            "text": "Bath",
-                            "weight": "bold",
-                            "align": "end",
-                            "gravity": "center",
-                            "margin": "none",
-                            "contents": []
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Kg.",
+                        "align": "end",
+                        "contents": []
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "margin": "xxl",
+                    "contents": [
+                      {
+                        "type": "spacer"
+                      },
+                      {
+                        "type": "text",
+                        "text": "6,200",
+                        "weight": "bold",
+                        "size": "3xl",
+                        "align": "center",
+                        "contents": []
+                      },
+                      {
+                        "type": "text",
+                        "text": "Bath",
+                        "weight": "bold",
+                        "align": "end",
+                        "gravity": "center",
+                        "margin": "none",
+                        "contents": []
                       }
                     ]
                   }
-                }
-              
-        },
+                ]
+              }
+            }
+          }
       ]);
       alert("Send Message")
     }
