@@ -69,29 +69,25 @@ function addCommas(nStr){
     return x1 + x2;
   }
 
-function sendMsg(){
-    if (liff.getContext().type !== "none" && liff.getContext().type !== "external"){
-        liff.sendMessages([
-            {
-                "type": "text",
-                "text": "Hello, world"
-            }
-        ])
-        alert("Message Sent")
+
+///////////////////////////////////
+///////// LIFF Function ///////////
+///////////////////////////////////
+
+async function sendMsg() {
+    if (liff.getContext().type !== "none") {
+      await liff.sendMessages([
+        {
+            "type": "text",
+            "text": "Hello, Pluk"
+        }
+      ])
+      alert("Message sent")
     }
-}
+  }
+
 
 function sendMsgAlert(){
     alert("msg send");
 }
-
-// function ExUsaRate(rate){
-//     text = this.rate*1500;
-//     return text;
-// }
-
-// function ImUsaRate(rate){
-//     text = this.rate*1500;
-//     return text;
-// }
 
