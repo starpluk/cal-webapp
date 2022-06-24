@@ -72,3 +72,15 @@ function addCommas(nStr){
 ///////// LIFF Function ///////////
 ///////////////////////////////////
 
+async function sendMsg() {
+  if (liff.getContext().type !== "none") {
+    await liff.sendMessages([
+      {
+        "type": "sticker",
+        "stickerId": 1,
+        "packageId": 1
+      }
+    ])
+    alert("Message sent")
+  }
+}
