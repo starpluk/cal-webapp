@@ -197,7 +197,7 @@ async function sendMsg() {
                           },
                           {
                             "type": "text",
-                            "text": shipping,
+                            "text": "ส่งออก",
                             "align": "end",
                             "contents": []
                           }
@@ -215,7 +215,7 @@ async function sendMsg() {
                           },
                           {
                             "type": "text",
-                            "text": country,
+                            "text": "australia",
                             "align": "end",
                             "contents": []
                           }
@@ -249,7 +249,7 @@ async function sendMsg() {
                           },
                           {
                             "type": "text",
-                            "text": text,
+                            "text": "20",
                             "weight": "bold",
                             "size": "3xl",
                             "align": "center",
@@ -272,7 +272,7 @@ async function sendMsg() {
               
         },
       ]);
-      alert('Send Message')
+      alert("Send Message")
     }
   }
 
