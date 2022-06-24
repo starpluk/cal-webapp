@@ -249,7 +249,7 @@ async function sendMsg() {
                           },
                           {
                             "type": "text",
-                            "text": valurRate,
+                            "text": text,
                             "weight": "bold",
                             "size": "3xl",
                             "align": "center",
@@ -272,7 +272,7 @@ async function sendMsg() {
               
         },
       ]);
-      closed();
+      alert('Send Message')
     }
   }
 
