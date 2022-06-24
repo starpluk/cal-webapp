@@ -233,7 +233,7 @@ async function sendMsg() {
                           },
                           {
                             "type": "text",
-                            "text": KgTotal+" Kg.",
+                            "text": " Kg.",
                             "align": "end",
                             "contents": []
                           }
