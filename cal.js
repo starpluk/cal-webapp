@@ -1,9 +1,10 @@
+var country, weightKG, widht, lenght, height, kg, dimention;
+var valurRate;
+var shipping;
+var KgTotal;
+var text, country_1, exim;
+
 function myFunction() {
-  var country, weightKG, widht, lenght, height, kg, dimention;
-  // var usaRate = 1500;
-  var valurRate;
-  var shipping;
-  var text, country_1, exim;
   var status;
 
   country = document.getElementById("country").value;
@@ -24,23 +25,32 @@ function myFunction() {
   dimention = (widht * lenght * height) / 5000;
 
   if (dimention > kg) {
-    valurRate = dimention * 1500;
+    KgTotal = dimention;
+    valurRate = KgTotal * 1500;
     text = valurRate;
     status = "Dimention";
   } else if (kg > dimention) {
-    valurRate = kg * 1500;
+    KgTotal = kg;
+    valurRate = KgTotal * 1500;
     text = valurRate;
     status = "Kg";
   } else {
     text = "";
   }
-  sessionStorage.setItem("weightKG", kg);
-  sessionStorage.setItem("resultText", addCommas(text));
-  sessionStorage.setItem("countryResult", country_1);
-  sessionStorage.setItem("shippingResult", shipping);
-  sessionStorage.setItem("Status", status);
 
-  window.location.replace("result.html");
+  addCommas(text)
+
+
+  sendMsg()
+
+
+//   sessionStorage.setItem("weightKG", kg);
+//   sessionStorage.setItem("resultText", addCommas(text));
+//   sessionStorage.setItem("countryResult", country_1);
+//   sessionStorage.setItem("shippingResult", shipping);
+//   sessionStorage.setItem("Status", status);
+
+//   window.location.replace("result.html");
 }
 
 function ReplaceIndex() {
@@ -176,12 +186,22 @@ async function sendMsg() {
                     "layout": "vertical",
                     "contents": [
                       {
-                        "type": "text",
-                        "text": "คำนวนค่าขนส่ง",
-                        "weight": "bold",
-                        "size": "lg",
-                        "align": "center",
-                        "contents": []
+                        "type": "box",
+                        "layout": "horizontal",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "text": "Import / Export :",
+                            "weight": "bold",
+                            "contents": []
+                          },
+                          {
+                            "type": "text",
+                            "text": shipping,
+                            "align": "end",
+                            "contents": []
+                          }
+                        ]
                       },
                       {
                         "type": "box",
@@ -195,7 +215,7 @@ async function sendMsg() {
                           },
                           {
                             "type": "text",
-                            "text": "Australia",
+                            "text": country,
                             "align": "end",
                             "contents": []
                           }
@@ -213,7 +233,7 @@ async function sendMsg() {
                           },
                           {
                             "type": "text",
-                            "text": "Kg.",
+                            "text": KgTotal+" Kg.",
                             "align": "end",
                             "contents": []
                           }
@@ -229,7 +249,7 @@ async function sendMsg() {
                           },
                           {
                             "type": "text",
-                            "text": "6,200",
+                            "text": valurRate,
                             "weight": "bold",
                             "size": "3xl",
                             "align": "center",
@@ -249,9 +269,10 @@ async function sendMsg() {
                     ]
                   }
                 }
+              
         },
       ]);
-      alert("Message sent");
+      closed();
     }
   }
 
