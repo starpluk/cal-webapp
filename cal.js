@@ -172,5 +172,5 @@ async function sendMsg() {
       ])
       alert("Message sent")
     }
-  }
+}
 
