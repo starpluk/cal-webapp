@@ -200,7 +200,7 @@ async function sendMsg() {
                   },
                   {
                     type: "text",
-                    text: country_1,
+                    text: ""+country_1,
                     align: "end",
                     contents: [],
                   },
@@ -218,7 +218,7 @@ async function sendMsg() {
                   },
                   {
                     type: "text",
-                    text: kg,
+                    text: ""+kg,
                     align: "end",
                     contents: [],
                   },
@@ -234,7 +234,7 @@ async function sendMsg() {
                   },
                   {
                     type: "text",
-                    text: priceTotal,
+                    text: ""+priceTotal,
                     weight: "bold",
                     size: "3xl",
                     align: "center",
