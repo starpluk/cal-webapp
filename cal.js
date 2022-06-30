@@ -1,8 +1,10 @@
 var country, weightKG, widht, lenght, height, kg, dimention;
-var valurRate, priceTotal;
+var valurRate
+var priceTotal = "";
 var shipping;
-var KgTotal;
-var text, country_1, exim;
+var KgTotal = "";
+var text, exim;
+var country_1 = "";
 
 function myFunction() {
   var status;
@@ -38,7 +40,7 @@ function myFunction() {
     text = "";
   }
 
-  priceTotal = vaddCommas(text);;
+  priceTotal = addCommas(text);
   
 
   sessionStorage.setItem("weightKG", kg);
@@ -218,7 +220,7 @@ async function sendMsg() {
                   },
                   {
                     type: "text",
-                    text: ""+kg,
+                    text: ""+KgTotal,
                     align: "end",
                     contents: [],
                   },
