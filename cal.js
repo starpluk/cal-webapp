@@ -1,5 +1,5 @@
 var country, weightKG, widht, lenght, height, kg, dimention;
-var valurRate;
+var valurRate, priceTotal;
 var shipping;
 var KgTotal;
 var text, country_1, exim;
@@ -38,7 +38,8 @@ function myFunction() {
     text = "";
   }
 
-  addCommas(text);
+  priceTotal = vaddCommas(text);;
+  
 
   sessionStorage.setItem("weightKG", kg);
   sessionStorage.setItem("resultText", text);
@@ -199,7 +200,7 @@ async function sendMsg() {
                   },
                   {
                     type: "text",
-                    text: "Australia",
+                    text: country_1,
                     align: "end",
                     contents: [],
                   },
@@ -217,7 +218,7 @@ async function sendMsg() {
                   },
                   {
                     type: "text",
-                    text: "Kg.",
+                    text: kg,
                     align: "end",
                     contents: [],
                   },
@@ -233,7 +234,7 @@ async function sendMsg() {
                   },
                   {
                     type: "text",
-                    text: "6,000",
+                    text: priceTotal,
                     weight: "bold",
                     size: "3xl",
                     align: "center",
