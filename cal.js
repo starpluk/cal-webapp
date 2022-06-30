@@ -256,7 +256,8 @@ async function sendMsg() {
                     "type": "text",
                     "text": ""+priceTotal,
                     "weight": "bold",
-                    "size": "3xl",
+                    "size": "xxl",
+                    "color": "#229104FF",
                     "align": "center",
                     "margin": "none",
                     "contents": []
