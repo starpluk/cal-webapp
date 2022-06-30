@@ -28,6 +28,7 @@
     margin-left: 5px;
 }
 
+
 .radioBTN {
     display: flex;
     margin-left: 50px;
@@ -302,3 +303,29 @@ body {
     font-size: 20px;
 }
 
+.liffInfo {
+    border-bottom: 1px dashed #ddd
+  }
+  
+  #pictureUrl {
+    display: block;
+    margin: 0 auto;
+    width: 12%;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    box-pack: center;
+    box-align: center;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+  }
+  
+  #accessToken, #utouId {
+    display: block;
+    overflow: auto
+  }
