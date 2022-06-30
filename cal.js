@@ -1,10 +1,11 @@
 var country, weightKG, widht, lenght, height, kg, dimention;
 var valurRate
 var priceTotal = "";
-var shipping;
+var shipping = "";
 var KgTotal = "";
 var text, exim;
 var country_1 = "";
+var status_1="";
 
 function myFunction() {
   var status;
@@ -35,11 +36,12 @@ function myFunction() {
     KgTotal = kg;
     valurRate = KgTotal * 1500;
     text = valurRate;
-    status = "Kg";
+    status = "น้ำหนัก Kg.";
   } else {
     text = "";
   }
 
+  status_1 = status;
   priceTotal = addCommas(text);
   
 
@@ -166,96 +168,122 @@ async function sendMsg() {
   if (liff.getContext().type !== "none") {
     await liff.sendMessages([
       {
-        type: "flex",
-        altText: "Flex Message",
-        contents: {
-          type: "bubble",
-          direction: "ltr",
-          hero: {
-            type: "image",
-            url: "https://www.img.in.th/images/8101764dd39238f4e26d8110cd237fae.png",
-            size: "5xl",
-            aspectRatio: "1.51:1",
-            aspectMode: "fit",
+        "type": "flex",
+        "altText": "Flex Message",
+        "contents": {
+          "type": "bubble",
+          "direction": "ltr",
+          "hero": {
+            "type": "image",
+            "url": "https://www.img.in.th/images/8101764dd39238f4e26d8110cd237fae.png",
+            "size": "full",
+            "aspectRatio": "1.51:1",
+            "aspectMode": "fit"
           },
-          body: {
-            type: "box",
-            layout: "vertical",
-            contents: [
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
               {
-                type: "text",
-                text: "คำนวนค่าขนส่ง",
-                weight: "bold",
-                size: "lg",
-                align: "center",
-                contents: [],
+                "type": "text",
+                "text": "คำนวนค่าขนส่ง",
+                "weight": "bold",
+                "size": "lg",
+                "align": "center",
+                "contents": []
               },
               {
-                type: "box",
-                layout: "horizontal",
-                contents: [
+                "type": "box",
+                "layout": "horizontal",
+                "margin": "lg",
+                "contents": [
                   {
-                    type: "text",
-                    text: "Country : ",
-                    weight: "bold",
-                    contents: [],
+                    "type": "text",
+                    "text": "Shipping : ",
+                    "weight": "bold",
+                    "contents": []
                   },
                   {
-                    type: "text",
-                    text: ""+country_1,
-                    align: "end",
-                    contents: [],
-                  },
-                ],
+                    "type": "text",
+                    "text": ""+shipping,
+                    "align": "end",
+                    "contents": []
+                  }
+                ]
               },
               {
-                type: "box",
-                layout: "horizontal",
-                contents: [
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
                   {
-                    type: "text",
-                    text: "น้ำหนัก :",
-                    weight: "bold",
-                    contents: [],
+                    "type": "text",
+                    "text": "Country : ",
+                    "weight": "bold",
+                    "contents": []
                   },
                   {
-                    type: "text",
-                    text: ""+KgTotal,
-                    align: "end",
-                    contents: [],
-                  },
-                ],
+                    "type": "text",
+                    "text": ""+country_1,
+                    "align": "end",
+                    "contents": []
+                  }
+                ]
               },
               {
-                type: "box",
-                layout: "horizontal",
-                margin: "xxl",
-                contents: [
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
                   {
-                    type: "spacer",
+                    "type": "text",
+                    "text": "น้ำหนัก :",
+                    "weight": "bold",
+                    "contents": []
                   },
                   {
-                    type: "text",
-                    text: ""+priceTotal,
-                    weight: "bold",
-                    size: "3xl",
-                    align: "center",
-                    contents: [],
-                  },
-                  {
-                    type: "text",
-                    text: "Bath",
-                    weight: "bold",
-                    align: "end",
-                    gravity: "center",
-                    margin: "none",
-                    contents: [],
-                  },
-                ],
+                    "type": "text",
+                    "text": KgTotal+" Kg.",
+                    "align": "end",
+                    "contents": []
+                  }
+                ]
               },
-            ],
-          },
-        },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "margin": "lg",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": ""+priceTotal,
+                    "weight": "bold",
+                    "size": "3xl",
+                    "align": "center",
+                    "margin": "none",
+                    "contents": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "Bath",
+                    "weight": "bold",
+                    "align": "end",
+                    "gravity": "center",
+                    "margin": "none",
+                    "contents": []
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "*ราคาค่าขนส่งคำนวนจาก"+status_1,
+                "size": "xs",
+                "color": "#777777FF",
+                "align": "center",
+                "margin": "lg",
+                "contents": []
+              }
+            ]
+          }
+        }
       }
     ]);
     closed();
