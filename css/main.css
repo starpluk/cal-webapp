@@ -303,7 +303,9 @@ body {
     font-size: 20px;
 }
 
-
+#DevConsole {
+    font-size: large;
+}
   
   #pictureUrl {
     display: block;
