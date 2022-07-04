@@ -568,7 +568,7 @@ async function sendMsg() {
             "contents": [
               {
                 "type": "text",
-                "text": "คำนวนค่าขนส่ง",
+                "text": "คำนวณค่าขนส่ง",
                 "weight": "bold",
                 "size": "lg",
                 "align": "center",
@@ -657,7 +657,7 @@ async function sendMsg() {
               },
               {
                 "type": "text",
-                "text": "*ราคาค่าขนส่งคำนวนจาก"+status_1,
+                "text": "*ราคาค่าขนส่งคำนวณจาก"+status_1,
                 "size": "xs",
                 "color": "#777777FF",
                 "align": "center",
