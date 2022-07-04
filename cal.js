@@ -664,6 +664,28 @@ async function sendMsg() {
                 "contents": []
               }
             ]
+          },
+          "footer": {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "spacer"
+              },
+              {
+                "type": "button",
+                "action": {
+                  "type": "message",
+                  "label": "ติดต่อพนักงาน",
+                  "text": shipping+" \n ประเทศ : "+country_1+"\n"+"น้ำหนัก : "+KgTotal+"\n\n กรุณารอสักครู่ทางเราส่งข้อมูลเบื้องต้นให้แอดมินแล้วค่ะ"
+                },
+                "color": "#144266",
+                "style": "primary"
+              },
+              {
+                "type": "spacer"
+              }
+            ]
           }
         }
       }
