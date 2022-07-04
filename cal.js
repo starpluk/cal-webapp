@@ -664,28 +664,6 @@ async function sendMsg() {
                 "contents": []
               }
             ]
-          },
-          "footer": {
-            "type": "box",
-            "layout": "horizontal",
-            "contents": [
-              {
-                "type": "spacer"
-              },
-              {
-                "type": "button",
-                "action": {
-                  "type": "message",
-                  "label": "ติดต่อพนักงาน",
-                  "text": "กรุณารอสักครู่"
-                },
-                "color": "#144266",
-                "style": "primary"
-              },
-              {
-                "type": "spacer"
-              }
-            ]
           }
         }
       }
