@@ -40,7 +40,7 @@ function myFunction() {
   }
 
   switch(country) {
-    case "USA":
+    case "U.S.A":
       text = UsaCanada(KgTotal);
       break;
     case "Canada":
