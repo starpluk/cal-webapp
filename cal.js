@@ -450,6 +450,7 @@ function Aus(kG) {
 		else {
 			price = kg*0;
 		}
+    return price;
 }
 
 ///////////////////////////////////
