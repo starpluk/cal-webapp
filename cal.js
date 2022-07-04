@@ -54,7 +54,7 @@ function myFunction() {
   }
 
   status_1 = status;
-  priceTotal = addCommas(text);
+  priceTotal = addCommas(text.toFixed(0));
   
 
   sessionStorage.setItem("weightKG", kg);
