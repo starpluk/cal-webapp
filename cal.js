@@ -78,8 +78,8 @@ function addCommas(nStr) {
   return x1 + x2;
 }
 
-function Aus(kg){
-  kg = KgTotal;
+function Aus(kG){
+  kg = kG;
   
   if(kg>0 && kg <= 0.5) //1140
 		{
