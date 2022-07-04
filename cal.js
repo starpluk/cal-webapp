@@ -40,8 +40,14 @@ function myFunction() {
   }
 
   switch(country) {
+    case "USA":
+      text = UsaCanada(KgTotal);
+      break;
+    case "Canada":
+      text = UsaCanada(KgTotal);
+      break;
     case "Australia":
-     text = Aus(KgTotal);
+      text = Aus(KgTotal);
       break;
     default:
      text = 0;
@@ -78,7 +84,7 @@ function addCommas(nStr) {
   return x1 + x2;
 }
 
-function Aus(kG){
+function UsaCanada(kG){
   kg = kG;
   
   if(kg>0 && kg <= 0.5) //1140
@@ -261,6 +267,189 @@ function Aus(kG){
 			price = kg*0;
 		}
     return price;
+}
+
+function Aus(kG) {
+  kg = kG;
+  if(kg>0 && kg <= 0.5) //1050
+		{
+			price = kg*1050;
+		}
+		else if (kg>0.5 && kg <= 1) //2140
+		{
+			price = kg*2140;
+		}
+		else if (kg>1 && kg <=1.5 ) //1740
+		{
+			price = kg*1740;
+		}
+		else if (kg>1.5 && kg <=2 ) //1450
+		{
+			price = kg*1450;
+		}
+		else if (kg>2 && kg <=2.5 ) //1344
+		{
+			price = kg*1344;
+		}
+		else if (kg>2.5 && kg <=3 ) //1333.33
+		{
+			price = kg*1333.33;
+		}
+		else if (kg>3 && kg <=3.5 ) //1242.86
+		{
+			price = kg*1242.86;
+		}
+		else if (kg>3.5 && kg <=4 ) //1137.5
+		{
+			price = kg*1137.5;
+		}
+		else if (kg>4 && kg <=4.5 ) //1088.89
+		{
+			price = kg*1088.89;
+		}
+		else if (kg>4.5 && kg <=5 ) //1018
+		{
+			price = kg*1018;
+		}
+		else if (kg>5 && kg <=5.5 ) //1009.09
+		{
+			price = kg*1009.09;
+		}
+		else if (kg>5.5 && kg <=6 ) //961.67
+		{
+			price = kg*961.67;
+		}
+		else if (kg>6 && kg <=6.5 ) //944.62
+		{
+			price = kg*944.62;
+		}
+		else if (kg>6.5 && kg <=7 ) //908.57
+		{
+			price = kg*908.57;
+		}
+		else if (kg>7 && kg <=7.5 ) //898.67
+		{
+			price = kg*898.67;
+		}
+		else if (kg>7.5 && kg <=8 ) //868.75
+		{
+			price = kg*868.75;
+		}
+		else if (kg>8 && kg <=8.5 ) //862.35
+		{
+			price = kg*862.35;
+		}
+		else if (kg>8.5 && kg <=9 ) //837.78
+		{
+			price = kg*837.78;
+		}
+		else if (kg>9 && kg <=9.5 ) //833.68
+		{
+			price = kg*833.68;
+		}
+		else if (kg>9.5 && kg <=10 ) //813
+		{
+			price = kg*813;
+		}
+		else if (kg>10 && kg <=10.5 ) //790.48
+		{
+			price = kg*790.48;
+		}
+		else if (kg>10.5 && kg <=11 ) //765.45
+		{
+			price = kg*765.45;
+		}
+		else if (kg>11 && kg <=11.5 ) //757.39
+		{
+			price = kg*757.39;
+		}
+		else if (kg>11.5 && kg <=12 ) //736.67
+		{
+			price = kg*736.67;
+		}
+		else if (kg>12 && kg <=12.5 ) //730.4
+		{
+			price = kg*730.4;
+		}
+		else if (kg>12.5 && kg <=13 ) //712.31
+		{
+			price = kg*712.31;
+		}
+		else if (kg>13 && kg <=13.5 ) //706.67
+		{
+			price = kg*706.67;
+		}
+		else if (kg>13.5 && kg <=14 ) //690.71
+		{
+			price = kg*690.71;
+		}
+		else if (kg>14 && kg <=14.5 ) //686.9
+		{
+			price = kg*686.9;
+		}
+		else if (kg>14.5 && kg <=15 ) //672.67
+		{
+			price = kg*672.67;
+		}
+		else if (kg>15 && kg <=15.5 ) //669.68
+		{
+			price = kg*669.68;
+		}
+		else if (kg>15.5 && kg <=16 ) //656.25
+		{
+			price = kg*656.25;
+		}
+		else if (kg>16 && kg <=16.5 ) //653.94
+		{
+			price = kg*653.94;
+		}
+		else if (kg>16.5 && kg <=17 ) //642.35
+		{
+			price = kg*642.35;
+		}
+		else if (kg>17 && kg <=17.5 ) //640.57
+		{
+			price = kg*640.57;
+		}
+		else if (kg>17.5 && kg <=18 ) //629.44
+		{
+			price = kg*629.44;
+		}
+		else if (kg>18 && kg <=18.5 ) //628.11
+		{
+			price = kg*628.11;
+		}
+		else if (kg>18.5 && kg <=19 ) //618.42
+		{
+			price = kg*618.42;
+		}
+		else if (kg>19 && kg <=19.5 ) //617.44
+		{
+			price = kg*617.44;
+		}
+		else if (kg>19.5 && kg <=20 ) //608
+		{
+			price = kg*608;
+		}
+		else if (kg>20 && kg <=45 ) //719
+		{
+			price = kg*719;
+		}
+		else if (kg>45 && kg <=71 ) //674
+		{
+			price = kg*674;
+		}
+		else if (kg>71 && kg <=100 ) //627
+		{
+			price = kg*627;
+		}
+		else if (kg>100) //628
+		{
+			price = kg*628;
+		}
+		else {
+			price = kg*0;
+		}
 }
 
 ///////////////////////////////////
