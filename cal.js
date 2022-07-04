@@ -1,5 +1,5 @@
 var country, weightKG, widht, lenght, height, kg, dimention;
-var valurRate, text, exim, price;
+var valurRate, text, exim;
 var priceTotal = "";
 var shipping = "";
 var KgTotal = "";
@@ -40,7 +40,7 @@ function myFunction() {
   }
 
   switch(country) {
-    case "U.S.A":
+    case "USA":
       text = UsaCanada(KgTotal);
       break;
     case "Canada":
@@ -450,6 +450,7 @@ function Aus(kG) {
 		else {
 			price = kg*0;
 		}
+
     return price;
 }
 
