@@ -286,17 +286,38 @@ body {
 }
 
 .rateResult {
-    display: flex;
     margin-left: -30px;
     font-size: 15px;
     font-weight: medium;
     
 }
 
-.price {
-    display: flex;
+.brandShipping{
+    display: block;
+}
+
+.pricing {
+    
     margin-left: 20px;
     font-size: 30px;
+}
+
+.FedexShipping {
+    display: block;
+    margin-top: -20px;
+    margin-left: -5px;
+}
+
+.TNTShipping {
+    display: block;
+    margin-top: 25px;
+    margin-left: -5px;
+}
+
+.UPSShipping {
+    display: block;
+    margin-top: 25px;
+    margin-left: -5px;
 }
 
 .Bath {
