@@ -63,7 +63,7 @@ function myFunction() {
   sessionStorage.setItem("shippingResult", shipping);
   sessionStorage.setItem("Status", status);
 
-  // window.location.replace("result.html");
+  window.location.replace("result.html");
   sendMsg();
 }
 
