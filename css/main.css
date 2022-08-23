@@ -297,7 +297,7 @@ body {
 }
 
 .pricing {
-    
+    display: flex;
     margin-left: 20px;
     font-size: 30px;
 }
@@ -316,13 +316,50 @@ body {
 
 .UPSShipping {
     display: block;
-    margin-top: 25px;
+    margin-top: 30px;
     margin-left: -5px;
 }
 
 .Bath {
-    margin-top: 10px;
-    font-size: 20px;
+    margin-left: 140px;
+    margin-top: -30px;
+    font-size: 16px;
+}
+
+.resultPrice {
+    margin-left: 60px;
+    margin-top: -20px;
+    font-size: 16px;
+}
+
+.RSP1 {
+    margin-top: 30px;
+    padding: 5px 25px;
+    
+    /* background-color:  #92A3FD; */
+    background: linear-gradient(180deg, rgba(20,66,102,1) 65%, rgba(20,66,102,0) 100%);
+}
+
+.RSP2 {
+    margin-top: 30px;
+}
+
+.RSP3 {
+    margin-top: 30px;
+}
+
+.Bath {
+    margin-top: -21px;
+    margin-left: 40px;
+    font-size: 16px;
+}
+
+.current2 {
+    margin-top: 30px;
+}
+
+.current3 {
+    margin-top: 30px;
 }
 
 #DevConsole {
