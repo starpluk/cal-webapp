@@ -328,29 +328,49 @@ body {
 
 .resultPrice {
     margin-left: 60px;
-    margin-top: -20px;
+    margin-top: -45px;
     font-size: 16px;
 }
 
-.RSP1 {
-    margin-top: 30px;
-    padding: 5px 25px;
-    
-    /* background-color:  #92A3FD; */
-    background: linear-gradient(180deg, rgba(20,66,102,1) 65%, rgba(20,66,102,0) 100%);
+.RSP1,.RSP2,.RSP3 {
+    margin-top: 20px;
+    padding: 1px 15px;
+
+    --button_radius: 0.75em;
+ --button_color: #e8e8e8;
+ --button_outline_color: #000000;
+ font-size: 11px;
+ font-weight: bold;
+ border: none;
+ border-radius: var(--button_radius);
+ background: #000000;
+
+ display: block;
+ box-sizing: border-box;
+ border: 2px solid #000000;
+ border-radius: var(--button_radius);
+ padding: 0.75em 1.5em;
+ background: #e8e8e8;
+ color: #000000;
+ transform: translateY(-0.2em);
+ transition: transform 0.1s ease;
 }
 
-.RSP2 {
-    margin-top: 30px;
-}
+button:hover .RSP1,.RSP2,.RSP3 {
+    /* Pull the button upwards when hovered */
+   transform: translateY(-0.33em);
+  }
+  
+  button:active .RSP1,.RSP2,.RSP3 {
+    /* Push the button downwards when pressed */
+   transform: translateY(0);
+  }
 
-.RSP3 {
-    margin-top: 30px;
-}
+
 
 .Bath {
     margin-top: -21px;
-    margin-left: 40px;
+    margin-left: 25px;
     font-size: 16px;
 }
 
@@ -388,3 +408,51 @@ body {
     display: block;
     overflow: auto
   }
+
+
+.input__2 {
+    display: flex;
+    margin-left: -28px;
+    margin-top: 10px;
+}
+
+
+.input_1 {
+    
+    margin-top: -40px;
+    margin-left: -70px;
+}
+
+.input_3 {
+    margin-top: 10px;
+    margin-left: -70px;
+}
+
+.input_4 {
+    
+    margin-top: 10px;
+    margin-left: -70px;
+}
+
+
+
+.input__label_1 {
+    margin-left: -50px;
+}
+
+.input__label_2 {
+    margin-left: -80px;
+}
+
+.input__label_3 {
+    margin-left: -90px;
+}
+
+.input__label_4 {
+    margin-left: -50px;
+}
+
+.input__field_4 {
+    padding: 7px;
+    margin-left: 15px;
+}

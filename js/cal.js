@@ -55,6 +55,10 @@ function ReplaceIndex() {
     sessionStorage.removeItem("resultText");
 }
 
+function ReplaceForm() {
+  window.location.replace('form.html');
+}
+
 function addCommas(nStr){
     nStr += '';
     x = nStr.split('.');

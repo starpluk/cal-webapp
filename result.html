@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script type=”text/javascript” src=”js/flex2html.min.js”></script>
     <script src="cal.js"></script>
+    
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 </head>
 <body>
@@ -20,6 +21,7 @@
             <div class="countryResult"></div>
 
             <br>
+            
 
             <div class="shipping">
                 การขนส่ง : &nbsp;
@@ -46,17 +48,18 @@
                 </div>
                 
                 <div class="resultPrice">
-                    <button class="RSP1">1,200</button>
-                    <div class="RSP2">1,200</div>
-                    <div class="RSP3">1,200</div>
+                    <button class="RSP1" id="RSP1" type="button" onclick="ReplaceForm()">1,200</button>
+                    <button class="RSP2" type="button" onclick="ReplaceForm()">1,200</button>
+                    <button class="RSP3" type="button" onclick="ReplaceIndex()">1,200</button>
                 </div>
 
                 <div class="Bath">
-                    <div class="current1">ราคา</div>
-                    <div class="current2">ราคา</div>
-                    <div class="current3">ราคา</div>
+                    <div class="current1">บาท</div>
+                    <div class="current2">บาท</div>
+                    <div class="current3">บาท</div>
                 </div>
-    
+                
+                
     
                 
                 
@@ -65,7 +68,7 @@
             </div>
             
             <!-- <div class="Status"></div> -->
-            
+           
                 
         
         
@@ -78,7 +81,7 @@
         
         
     <!-- <button class="button" type="button" onclick="testText()" style="color: white ;">text</button> -->
-    <!-- <button class="button" type="button" onclick="ReplaceIndex()" style="color: white ;">ย้อนกลับ</button> -->
+    <button class="button" type="button" onclick="ReplaceIndex()" style="color: white ;">คำนวนอีกครั้ง</button>
 
     </div>
 
@@ -92,7 +95,9 @@
             $(".shippingResult").html( sessionStorage.getItem("shippingResult"));
             $(".Status").html( sessionStorage.getItem("Status"));
             $(".weightKG").html( sessionStorage.getItem("weightKG"));
-            
+            $(".RSP1").html( sessionStorage.getItem("priceTotalFedex"));
+            $(".RSP2").html( sessionStorage.getItem("priceTotalTNT"));
+            $(".RSP3").html( sessionStorage.getItem("priceTotalUPS"));
             // button click
             // $("#btnClear").click(function(){		
             //     localStorage.removeItem("sName");
