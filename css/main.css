@@ -369,17 +369,17 @@ button:hover .RSP1,.RSP2,.RSP3 {
 
 
 .Bath {
-    margin-top: -21px;
+    margin-top: -18px;
     margin-left: 25px;
     font-size: 16px;
 }
 
 .current2 {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .current3 {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 #DevConsole {
@@ -457,7 +457,7 @@ button:hover .RSP1,.RSP2,.RSP3 {
     margin-left: 15px;
 }
 
-.button-29 {
+.button-29,.RSP1,.RSP2,.RSP3 {
     align-items: center;
     appearance: none;
     /* background-image:url(/img/fedex.svg), radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
@@ -468,7 +468,7 @@ button:hover .RSP1,.RSP2,.RSP3 {
     border-radius: 6px;
     box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
     box-sizing: border-box;
-    color: #fff;
+    color: rgb(57, 57, 57);
     cursor: pointer;
     display: inline-flex;
     font-family: "JetBrains Mono",monospace;
@@ -494,7 +494,7 @@ button:hover .RSP1,.RSP2,.RSP3 {
     /* background: url(/img/fedex.svg) no-repeat left; */
     /* background-size: 28px; */
     /* background-position-x: 5px; */
-    /* background-color: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);; */
+    background-color: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);;
   }
   
   .button-29:focus {
