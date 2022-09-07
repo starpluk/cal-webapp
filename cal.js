@@ -116,6 +116,239 @@ function submitForm() {
     sendMsg();
 }
 
+///////////////////////////////////
+///////// LIFF Function ///////////
+///////////////////////////////////
+function createUniversalLink() {
+  const link1 = liff.permanentLink.createUrl();
+  document.getElementById("universalLink1").append(link1);
+
+  liff.permanentLink.setExtraQueryParam("param=9");
+  const link2 = liff.permanentLink.createUrl();
+  document.getElementById("universalLink2").append(link2);
+}
+
+async function shareMsg() {
+  await liff.shareTargetPicker([
+    {
+      type: "text",
+      text: "This message was sent by ShareTargetPicker",
+    },
+  ]);
+}
+
+function logOut() {
+  liff.logout();
+  window.location.reload();
+}
+
+function closed() {
+  liff.closeWindow();
+}
+
+async function scanCode() {
+  const result = await liff.scanCode();
+  document.getElementById("scanCode").append(result.value);
+}
+
+function openWindow() {
+  liff.openWindow({
+    url: "https://line.me",
+    external: true,
+  });
+}
+
+async function getFriendship() {
+  const friend = await liff.getFriendship();
+  document.getElementById("friendship").append(friend.friendFlag);
+  if (!friend.friendFlag) {
+    if (confirm("คุณยังไม่ได้เพิ่ม Bot เป็นเพื่อน จะเพิ่มเลยไหม?")) {
+      window.location = "https://line.me/R/ti/p/@YOUR-BOT-ID";
+    }
+  }
+}
+
+function getContext() {
+  if (liff.getContext() != null) {
+    document.getElementById("type").append(liff.getContext().type);
+    document.getElementById("viewType").append(liff.getContext().viewType);
+    document.getElementById("utouId").append(liff.getContext().utouId);
+    document.getElementById("roomId").append(liff.getContext().roomId);
+    document.getElementById("groupId").append(liff.getContext().groupId);
+  }
+}
+
+async function getUserProfile() {
+  const profile = await liff.getProfile();
+  document.getElementById("pictureUrl").src = profile.pictureUrl;
+  document.getElementById("userId").append(profile.userId);
+  document.getElementById("statusMessage").append(profile.statusMessage);
+  document.getElementById("displayName").append(profile.displayName);
+  document
+    .getElementById("decodedIDToken")
+    .append(liff.getDecodedIDToken().email);
+}
+
+function getEnvironment() {
+  document.getElementById("os").append(liff.getOS());
+  document.getElementById("language").append(liff.getLanguage());
+  document.getElementById("version").append(liff.getVersion());
+  document.getElementById("accessToken").append(liff.getAccessToken());
+  document.getElementById("isInClient").append(liff.isInClient());
+  // if (liff.isInClient()) {
+  //   document.getElementById("btnLogOut").style.display = "none"
+  // } else {
+  //   document.getElementById("btnMsg").style.display = "none"
+  //   document.getElementById("btnScanCode").style.display = "none"
+  //   document.getElementById("btnClose").style.display = "none"
+  // }
+}
+
+/////////////////////////////////
+//////// SEND MESSAGE ///////////
+/////////////////////////////////
+
+// async function sendMsg() {
+//   if (liff.getContext().type !== "none") {
+//     await liff.sendMessages([
+//       {
+//         "type": "flex",
+//         "altText": "Flex Message",
+//         "contents": {
+//           "type": "bubble",
+//           "direction": "ltr",
+//           "hero": {
+//             "type": "image",
+//             "url": "https://www.img.in.th/images/8101764dd39238f4e26d8110cd237fae.png",
+//             "size": "full",
+//             "aspectRatio": "1.51:1",
+//             "aspectMode": "fit"
+//           },
+//           "body": {
+//             "type": "box",
+//             "layout": "vertical",
+//             "contents": [
+//               {
+//                 "type": "text",
+//                 "text": "คำนวณค่าขนส่ง",
+//                 "weight": "bold",
+//                 "size": "lg",
+//                 "align": "center",
+//                 "contents": []
+//               },
+//               {
+//                 "type": "box",
+//                 "layout": "horizontal",
+//                 "margin": "lg",
+//                 "contents": [
+//                   {
+//                     "type": "text",
+//                     "text": "Shipping : ",
+//                     "weight": "bold",
+//                     "contents": []
+//                   },
+//                   {
+//                     "type": "text",
+//                     "text": ""+shipping,
+//                     "align": "end",
+//                     "contents": []
+//                   }
+//                 ]
+//               },
+//               {
+//                 "type": "box",
+//                 "layout": "horizontal",
+//                 "contents": [
+//                   {
+//                     "type": "text",
+//                     "text": "Country : ",
+//                     "weight": "bold",
+//                     "contents": []
+//                   },
+//                   {
+//                     "type": "text",
+//                     "text": ""+country_1,
+//                     "align": "end",
+//                     "contents": []
+//                   }
+//                 ]
+//               },
+//               {
+//                 "type": "box",
+//                 "layout": "horizontal",
+//                 "contents": [
+//                   {
+//                     "type": "text",
+//                     "text": "น้ำหนัก :",
+//                     "weight": "bold",
+//                     "contents": []
+//                   },
+//                   {
+//                     "type": "text",
+//                     "text": KgTotal+" Kg.",
+//                     "align": "end",
+//                     "contents": []
+//                   }
+//                 ]
+//               },
+//               {
+//                 "type": "box",
+//                 "layout": "horizontal",
+//                 "margin": "lg",
+//                 "contents": [
+//                   {
+//                     "type": "text",
+//                     "text": ""+priceTotal,
+//                     "weight": "bold",
+//                     "size": "xxl",
+//                     "color": "#229104FF",
+//                     "align": "center",
+//                     "margin": "none",
+//                     "contents": []
+//                   },
+//                   {
+//                     "type": "text",
+//                     "text": "Bath",
+//                     "weight": "bold",
+//                     "align": "end",
+//                     "gravity": "center",
+//                     "margin": "none",
+//                     "contents": []
+//                   }
+//                 ]
+//               },
+//               {
+//                 "type": "text",
+//                 "text": "*ราคาค่าขนส่งคำนวณจาก"+status_1,
+//                 "size": "xs",
+//                 "color": "#777777FF",
+//                 "align": "center",
+//                 "margin": "lg",
+//                 "contents": []
+//               }
+//             ]
+//           }
+//         }
+//       }
+//     ]);
+//     closed();
+//   }
+// }
+
+async function sendMsg() {
+    if (liff.getContext().type !== "none") {
+      await liff.sendMessages([
+        {
+            
+                "type": "text",
+                "text": "Success!"
+              
+        }
+      ]);
+      closed();
+    }
+  }
+
 // function UsaCanada(kG){
 //   kg = kG;
   
@@ -1823,235 +2056,3 @@ function exAusUPS(kG){
 
 
 
-///////////////////////////////////
-///////// LIFF Function ///////////
-///////////////////////////////////
-function createUniversalLink() {
-  const link1 = liff.permanentLink.createUrl();
-  document.getElementById("universalLink1").append(link1);
-
-  liff.permanentLink.setExtraQueryParam("param=9");
-  const link2 = liff.permanentLink.createUrl();
-  document.getElementById("universalLink2").append(link2);
-}
-
-async function shareMsg() {
-  await liff.shareTargetPicker([
-    {
-      type: "text",
-      text: "This message was sent by ShareTargetPicker",
-    },
-  ]);
-}
-
-function logOut() {
-  liff.logout();
-  window.location.reload();
-}
-
-function closed() {
-  liff.closeWindow();
-}
-
-async function scanCode() {
-  const result = await liff.scanCode();
-  document.getElementById("scanCode").append(result.value);
-}
-
-function openWindow() {
-  liff.openWindow({
-    url: "https://line.me",
-    external: true,
-  });
-}
-
-async function getFriendship() {
-  const friend = await liff.getFriendship();
-  document.getElementById("friendship").append(friend.friendFlag);
-  if (!friend.friendFlag) {
-    if (confirm("คุณยังไม่ได้เพิ่ม Bot เป็นเพื่อน จะเพิ่มเลยไหม?")) {
-      window.location = "https://line.me/R/ti/p/@YOUR-BOT-ID";
-    }
-  }
-}
-
-function getContext() {
-  if (liff.getContext() != null) {
-    document.getElementById("type").append(liff.getContext().type);
-    document.getElementById("viewType").append(liff.getContext().viewType);
-    document.getElementById("utouId").append(liff.getContext().utouId);
-    document.getElementById("roomId").append(liff.getContext().roomId);
-    document.getElementById("groupId").append(liff.getContext().groupId);
-  }
-}
-
-async function getUserProfile() {
-  const profile = await liff.getProfile();
-  document.getElementById("pictureUrl").src = profile.pictureUrl;
-  document.getElementById("userId").append(profile.userId);
-  document.getElementById("statusMessage").append(profile.statusMessage);
-  document.getElementById("displayName").append(profile.displayName);
-  document
-    .getElementById("decodedIDToken")
-    .append(liff.getDecodedIDToken().email);
-}
-
-function getEnvironment() {
-  document.getElementById("os").append(liff.getOS());
-  document.getElementById("language").append(liff.getLanguage());
-  document.getElementById("version").append(liff.getVersion());
-  document.getElementById("accessToken").append(liff.getAccessToken());
-  document.getElementById("isInClient").append(liff.isInClient());
-  // if (liff.isInClient()) {
-  //   document.getElementById("btnLogOut").style.display = "none"
-  // } else {
-  //   document.getElementById("btnMsg").style.display = "none"
-  //   document.getElementById("btnScanCode").style.display = "none"
-  //   document.getElementById("btnClose").style.display = "none"
-  // }
-}
-
-/////////////////////////////////
-//////// SEND MESSAGE ///////////
-/////////////////////////////////
-
-// async function sendMsg() {
-//   if (liff.getContext().type !== "none") {
-//     await liff.sendMessages([
-//       {
-//         "type": "flex",
-//         "altText": "Flex Message",
-//         "contents": {
-//           "type": "bubble",
-//           "direction": "ltr",
-//           "hero": {
-//             "type": "image",
-//             "url": "https://www.img.in.th/images/8101764dd39238f4e26d8110cd237fae.png",
-//             "size": "full",
-//             "aspectRatio": "1.51:1",
-//             "aspectMode": "fit"
-//           },
-//           "body": {
-//             "type": "box",
-//             "layout": "vertical",
-//             "contents": [
-//               {
-//                 "type": "text",
-//                 "text": "คำนวณค่าขนส่ง",
-//                 "weight": "bold",
-//                 "size": "lg",
-//                 "align": "center",
-//                 "contents": []
-//               },
-//               {
-//                 "type": "box",
-//                 "layout": "horizontal",
-//                 "margin": "lg",
-//                 "contents": [
-//                   {
-//                     "type": "text",
-//                     "text": "Shipping : ",
-//                     "weight": "bold",
-//                     "contents": []
-//                   },
-//                   {
-//                     "type": "text",
-//                     "text": ""+shipping,
-//                     "align": "end",
-//                     "contents": []
-//                   }
-//                 ]
-//               },
-//               {
-//                 "type": "box",
-//                 "layout": "horizontal",
-//                 "contents": [
-//                   {
-//                     "type": "text",
-//                     "text": "Country : ",
-//                     "weight": "bold",
-//                     "contents": []
-//                   },
-//                   {
-//                     "type": "text",
-//                     "text": ""+country_1,
-//                     "align": "end",
-//                     "contents": []
-//                   }
-//                 ]
-//               },
-//               {
-//                 "type": "box",
-//                 "layout": "horizontal",
-//                 "contents": [
-//                   {
-//                     "type": "text",
-//                     "text": "น้ำหนัก :",
-//                     "weight": "bold",
-//                     "contents": []
-//                   },
-//                   {
-//                     "type": "text",
-//                     "text": KgTotal+" Kg.",
-//                     "align": "end",
-//                     "contents": []
-//                   }
-//                 ]
-//               },
-//               {
-//                 "type": "box",
-//                 "layout": "horizontal",
-//                 "margin": "lg",
-//                 "contents": [
-//                   {
-//                     "type": "text",
-//                     "text": ""+priceTotal,
-//                     "weight": "bold",
-//                     "size": "xxl",
-//                     "color": "#229104FF",
-//                     "align": "center",
-//                     "margin": "none",
-//                     "contents": []
-//                   },
-//                   {
-//                     "type": "text",
-//                     "text": "Bath",
-//                     "weight": "bold",
-//                     "align": "end",
-//                     "gravity": "center",
-//                     "margin": "none",
-//                     "contents": []
-//                   }
-//                 ]
-//               },
-//               {
-//                 "type": "text",
-//                 "text": "*ราคาค่าขนส่งคำนวณจาก"+status_1,
-//                 "size": "xs",
-//                 "color": "#777777FF",
-//                 "align": "center",
-//                 "margin": "lg",
-//                 "contents": []
-//               }
-//             ]
-//           }
-//         }
-//       }
-//     ]);
-//     closed();
-//   }
-// }
-
-async function sendMsg() {
-    if (liff.getContext().type !== "none") {
-      await liff.sendMessages([
-        {
-            
-                "type": "text",
-                "text": "ประเภทขนส่ง :"+shipping+"\n\nประเทศต้นทาง : Thailand\nประเทศปลายทาง : "+country+"\n\nประเภทสินค้า : "+typeproductLIFF+"\n\nน้ำหนัก : "+weightKG+" KG.\n\nสนใจใช้บริการ : "+agentShip+"\n\nราคาคำนวนเบื้องต้น : "+priceLIFF+"\n\nชื่อผู้ส่ง : "+nameLIFF+"\nเบอร์โทร : "+telLIFF+"\nE-mail : "+emailLIFF
-              
-        }
-      ]);
-      closed();
-    }
-  }
