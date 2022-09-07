@@ -7,7 +7,8 @@ var KgTotal = "";
 var country_1 = "";
 var status_1="";
 var priceLIFF,nameLIFF,telLIFF,emailLIFF,typeproductLIFF;
-var agentShip;
+var agentShip="";
+var priceTotalFedex,priceTotalTNT,priceTotalUPS;
 
 function myFunction() {
   var status;
