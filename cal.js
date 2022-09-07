@@ -112,9 +112,6 @@ function submitForm() {
     telLIFF = document.getElementById("input__field_2").value;
     emailLIFF = document.getElementById("input__field_3").value;
     typeproductLIFF = document.getElementById("input__field_4").value; */
-
-    // window.location.replace("index.html");
-
     sendMsg();
 }
 
