@@ -113,7 +113,7 @@ function submitForm() {
     emailLIFF = document.getElementById("input__field_3").value;
     typeproductLIFF = document.getElementById("input__field_4").value; */
 
-    sendMsg();
+    window.location.replace("index.html");
 }
 
 ///////////////////////////////////
