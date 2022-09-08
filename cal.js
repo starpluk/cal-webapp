@@ -6,7 +6,7 @@ var shipping = "";
 var KgTotal = "";
 var country_1 = "";
 var status_1="";
-var priceLIFF,nameLIFF,telLIFF,emailLIFF,typeproductLIFF;
+var priceLIFF = "",nameLIFF="",telLIFF="",emailLIFF="",typeproductLIFF="";
 var agentShip="";
 var priceTotalFedex,priceTotalTNT,priceTotalUPS;
 
@@ -110,10 +110,10 @@ function addCommas(nStr) {
 }
 
 function submitForm() {
-    /* nameLIFF = document.getElementById("input__field_1").value;
+    nameLIFF = document.getElementById("input__field_1").value;
     telLIFF = document.getElementById("input__field_2").value;
     emailLIFF = document.getElementById("input__field_3").value;
-    typeproductLIFF = document.getElementById("input__field_4").value; */
+    typeproductLIFF = document.getElementById("input__field_4").value;
 
     sessionStorage.setItem("nameLIFF",nameLIFF);
     sessionStorage.setItem("telLIFF",telLIFF);
