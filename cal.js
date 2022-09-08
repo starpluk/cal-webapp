@@ -108,15 +108,15 @@ function addCommas(nStr) {
 }
 
 function submitForm() {
-    nameLIFF = document.getElementById("input__field_1").value;
+    /* nameLIFF = document.getElementById("input__field_1").value;
     telLIFF = document.getElementById("input__field_2").value;
     emailLIFF = document.getElementById("input__field_3").value;
-    typeproductLIFF = document.getElementById("input__field_4").value;
+    typeproductLIFF = document.getElementById("input__field_4").value; */
 
-    sessionStorage.setItem("nameLIFF",nameLIFF);
+   /*  sessionStorage.setItem("nameLIFF",nameLIFF);
     sessionStorage.setItem("telLIFF",telLIFF);
     sessionStorage.setItem("emailLIFF",emailLIFF);
-    sessionStorage.setItem("typeproductLIFF",typeproductLIFF);
+    sessionStorage.setItem("typeproductLIFF",typeproductLIFF); */
     
     sendMsg();
 }
