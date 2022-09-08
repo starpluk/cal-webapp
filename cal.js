@@ -92,6 +92,8 @@ function ReplaceIndex() {
 function ReplaceForm() {
     priceLIFF = priceTotalFedex;
     agentShip = "Fedex";
+    sessionStorage.setItem("priceLIFF",priceLIFF);
+
 	window.location.replace("form.html");
   }
 
@@ -113,12 +115,13 @@ function submitForm() {
     emailLIFF = document.getElementById("input__field_3").value;
     typeproductLIFF = document.getElementById("input__field_4").value; */
 
-   /*  sessionStorage.setItem("nameLIFF",nameLIFF);
+    sessionStorage.setItem("nameLIFF",nameLIFF);
     sessionStorage.setItem("telLIFF",telLIFF);
     sessionStorage.setItem("emailLIFF",emailLIFF);
-    sessionStorage.setItem("typeproductLIFF",typeproductLIFF); */
+    sessionStorage.setItem("typeproductLIFF",typeproductLIFF);
     
-    sendMsg();
+    
+    window.location.replace("confirm.html");
 }
 
 ///////////////////////////////////
