@@ -225,8 +225,10 @@ async function sendMsg() {
       await liff.sendMessages([
         {
             
+            
                 "type": "text",
-                "text": "Success!_2"
+                "text": "ประเภทการขนส่ง : ส่งออก\nเอเจนท์ : Fedex\n\nประเทศต้นทาง : Thailand\nประเทศปลายทาง : Australia\n\nน้ำหนัก : 12 KG.\n\nประเภทสินค้า : Coffee\n\nราคาคำนวนเบื้องต้น : 5,868 บาท\n\nชื่อผู้ส่ง : Pluk Rich\nเบอร์โทร : 0805044440\nE-mail : Pluk@gmail.com"
+              
               
         }
       ]);
