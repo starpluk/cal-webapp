@@ -93,6 +93,7 @@ function ReplaceForm() {
     priceLIFF = priceTotalFedex;
     agentShip = "Fedex";
     sessionStorage.setItem("priceLIFF",priceLIFF);
+    sessionStorage.setItem("priceTotalFedex",priceTotalFedex);
 
 	window.location.replace("form.html");
   }
@@ -121,6 +122,7 @@ function submitForm() {
     sessionStorage.setItem("telLIFF",telLIFF);
     sessionStorage.setItem("emailLIFF",emailLIFF);
     sessionStorage.setItem("typeproductLIFF",typeproductLIFF);
+    sessionStorage.setItem("priceTotalFedex",priceTotalFedex);
     // sessionStorage.setItem("priceLIFF",priceLIFF)
     
     window.location.replace("confirm.html");
