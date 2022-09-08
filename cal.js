@@ -6,7 +6,7 @@ var shipping = "";
 var KgTotal = "";
 var country_1 = "";
 var status_1="";
-var priceLIFF,nameLIFF="",telLIFF="",emailLIFF="",typeproductLIFF="";
+var priceLIFF="",nameLIFF="",telLIFF="",emailLIFF="",typeproductLIFF="";
 var agentShip="";
 var priceTotalFedex,priceTotalTNT,priceTotalUPS;
 
@@ -92,7 +92,7 @@ function ReplaceIndex() {
 function ReplaceForm() {
     priceLIFF = priceTotalFedex;
     agentShip = "Fedex";
-    // sessionStorage.setItem("priceLIFF",priceLIFF);
+    sessionStorage.setItem("priceLIFF",priceLIFF);
 
 	window.location.replace("form.html");
   }
@@ -121,7 +121,7 @@ function submitForm() {
     sessionStorage.setItem("telLIFF",telLIFF);
     sessionStorage.setItem("emailLIFF",emailLIFF);
     sessionStorage.setItem("typeproductLIFF",typeproductLIFF);
-    sessionStorage.setItem("priceLIFF",priceLIFF)
+    // sessionStorage.setItem("priceLIFF",priceLIFF)
     
     window.location.replace("confirm.html");
 }
