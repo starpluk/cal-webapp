@@ -88,7 +88,7 @@ select {
     margin-left: 0px;
     color: #ADA4A5;
     /* icon */
-  background: url('/img/icon_pin.png') no-repeat left;
+  background: url('img/icon_pin.png') no-repeat left;
   background-size: 28px;
   background-position-x: 5px;
   background-color: white;
@@ -107,7 +107,7 @@ select {
   text-align: center;
   /* icon */
   padding-left: 25px;
-  background: url('/img/icon_weight.png') no-repeat left;
+  background: url('img/icon_weight.png') no-repeat left;
   background-size: 28px;
   background-position-x: 5px;
   background-color: white;
