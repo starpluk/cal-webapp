@@ -52,7 +52,7 @@ function myFunction() {
     KgTotal = dimention;
     if (oversize > 330) {
       textOversize =
-        "ขนาดสินค้าเกินขนาดที่กำหนด อาจมีการจัดเก็บค่าบริการเพิ่มเติม";
+        "*The product is oversize, Please contact us.";
     } else {
       textOversize = "";
     }
@@ -1371,6 +1371,7 @@ function myFunction() {
   sessionStorage.setItem("priceTotalFedex", priceTotalFedex);
   sessionStorage.setItem("priceTotalTNT", priceTotalTNT);
   sessionStorage.setItem("priceTotalUPS", priceTotalUPS);
+  sessionStorage.setItem("textOversize",textOversize);
 
   if (document.getElementById("export").checked == true) {
     if(country=="Australia"||country=="Austria"||country=="Belgium"||country=="Denmark"||country=="Finland"
@@ -8442,66 +8443,3952 @@ function exFedexZoneZ(kG) {
   return price;
 }
 
-function imFedexZoneA(kG) {
-  return (price = 0);
+function imFedexZoneA(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 2090;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 2750;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 3140;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 3460;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 3850;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 3860;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 4150;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 4370;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 4660;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 4880;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 5220;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 5380;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 5620;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 5780;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 6020;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 6180;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 6420;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 6580;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 6820;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 6980;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 8090;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 8140;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 8260;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 8320;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 8440;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 8490;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 8620;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 8670;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 8790;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 8850;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 8970;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 9020;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 9150;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 9200;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 9320;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 9380;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 9500;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 9560;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 9680;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 9730;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*419;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*419;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*406;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*350;
+        }
+        else if (kg>100) //
+        {
+            price = kg*310;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneB(kG) {
-  return (price = 0);
+function imFedexZoneB(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1370;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 1630;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 1930;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 2160;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 2450;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 3510;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 3770;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 3950;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 4200;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 4390;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 5080;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 5310;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 5610;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 5840;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 6130;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 6360;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 6660;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 6890;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 7190;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 7420;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 7600;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price =7740 ;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 7940;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 8070;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 8270;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 8410;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 8610;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 8740;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 8940;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 9070;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 9280;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 9410;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 9610;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 9740;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 9940;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 10080;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 10280;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 10410;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 10610;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 10750;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*567;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*567;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*564;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*557;
+        }
+        else if (kg>100) //
+        {
+            price = kg*538;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneC(kG) {
-  return (price = 0);
+function imFedexZoneC(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 3660;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 4220;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 4890;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 5500;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 6170;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 6640;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 7060;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 7420;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 7850;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 8200;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 8640;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 9080;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 9590;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 10040;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 10550;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 10990;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 11510;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 11950;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 12460;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 12900;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 13040;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 13260;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 13540;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 13750;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 14030;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 14240;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 14520;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 14740;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 15020;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 15230;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 15510;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 15720;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 16010;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 16220;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 16500;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 16710;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 16990;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 17210;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 17490;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 17700;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*848;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*848;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*754;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*719;
+        }
+        else if (kg>100) //
+        {
+            price = kg*688;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneD(kG) {
-  return (price = 0);
+function imFedexZoneD(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 3340;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price =3970 ;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 4670;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 5300;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 6010;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 6050;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 6490;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 6870;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price =7320;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 7690;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 8510;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 8800;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price =9160;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 9450;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 9820;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 10110;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 10470;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 10760;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 11120;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 11420;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 11720;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 11950;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 12250;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 12480;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 12780;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 13020;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 13320;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 13550;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 13850;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 14080;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 14380;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 14610;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 14920;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 15150;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 15450;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 15680;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 15980;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price =16210;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 16510;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 16750;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*817;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*817;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*750;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*728;
+        }
+        else if (kg>100) //
+        {
+            price = kg*684;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneE(kG) {
-  return (price = 0);
+function imFedexZoneE(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 2240;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price =3420;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 4120;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 4740;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 5440;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 5490;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 6020;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 6470;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 7010;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 7460;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 7540;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 7880;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 8310;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 8650;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 9070;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 9410;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 9830;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 10170;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 10600;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 10940;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 12540;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 12710;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 12960;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 13130;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 13380;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 13550;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 13800;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 13970;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 14220;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 14390;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 14640;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 14810;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 15060;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 15230;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 15480;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 15650;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 15900;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 16070;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 16320;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 16490;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*809;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*809;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*681;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*862;
+        }
+        else if (kg>100) //
+        {
+            price = kg*849;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneF(kG) {
-  return (price = 0);
+function imFedexZoneF(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1890;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 3620;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 4320;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 4940;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 5640;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 5650;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 6190;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 6660;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 7210;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 7670;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 7760;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 8110;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 8550;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 8900;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 9330;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 9680;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 10110;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 10460;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 10900;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 11250;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 11330;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 11440;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 11630;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 11740;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 11930;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 12030;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 12220;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 12330;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price =12520;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 12630;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 12820;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 12930;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 13110;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 13220;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 13410;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 13520;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 13710;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 13820;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 14010;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 14110;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*601;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*601;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*598;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*598;
+        }
+        else if (kg>100) //
+        {
+            price = kg*600;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneG(kG) {
-  return (price = 0);
+function imFedexZoneG(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price =1880;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 3740;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 4630;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 5430;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 6310;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 6320;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 6950;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 7490;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 8120;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 8660;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 8750;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 9090;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 9520;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 9860;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price =10280;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 10620;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 11050;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 11390;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 11810;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 12150;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price =12240 ;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 12420;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 12690;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 12870;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 13140;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 13320;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 13590;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 13780;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 14040;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 14230;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 14490;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 14680;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 14950;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 15130;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 15400;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 15580;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 15850;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 16030;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 16300;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 16490;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*636;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*636;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*633;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*636;
+        }
+        else if (kg>100) //
+        {
+            price = kg*635;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneH(kG) {
-  return (price = 0);
+function imFedexZoneH(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1900;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 3660;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 4530;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 5340;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 6220;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 6230;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 6830;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 7360;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 7960;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 8500;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 8560;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 8890;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 9290;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price =9610;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 10010;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 10340;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 10730;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 11060;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 11450;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price =11780;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 25460;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price =25830;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 26270;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 26650;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 27090;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 27460;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 27910;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 28280;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 28720;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 29100;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 29540;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 29910;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 30350;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 30730;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 31170;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 31540;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 31990;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 32360;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 32800;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 33180;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*1876;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*1876;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*1592;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*1466;
+        }
+        else if (kg>100) //
+        {
+            price = kg*1422;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneK(kG) {
-  return (price = 0);
+function imFedexZoneK(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1060;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 1280;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 1490;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 1640;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 1850;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 1970;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 2140;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 2250;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 2420;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 2530;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 2940;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 3030;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 3180;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 3270;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 3420;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 3510;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 3670;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 3750;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 3910;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 4000;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 5370;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 5400;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 5510;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 5540;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 5640;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 5680;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 5780;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 5810;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 5920;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 5950;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 6050;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 6090;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 6190;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 6220;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 6330;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 6360;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 6460;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 6500;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 6600;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 6630;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*314;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*314;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*316;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*271;
+        }
+        else if (kg>100) //
+        {
+            price = kg*269;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneN(kG) {
-  return (price = 0);
+function imFedexZoneN(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1770;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 2080;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 2440;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price =2730;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 3100;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 3200;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 3440;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 3610;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 3840;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 4010;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 4270;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 4460;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 4720;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 4910;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 5170;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 5360;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 5620;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 5810;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 6070;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 6260;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 6330;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 6440;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 6610;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 6720;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 6900;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 7010;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 7180;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 7290;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 7470;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price =7580 ;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 7750;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 7860;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 8040;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 8150;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 8320;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 8430;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 8610;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 8720;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 8890;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price =9000;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*680;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*680;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*577;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*570;
+        }
+        else if (kg>100) //
+        {
+            price = kg*526;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneO(kG) {
-  return (price = 0);
+function imFedexZoneO(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1790;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price =2370;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 2820;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 3190;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 3630;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 3630;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 3920;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 4140;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 4430;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 4650;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 6560;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 6780;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 7070;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 7290;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 7580;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 7800;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 8100;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 8320;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 8610;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 8830;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 10440;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 10650;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 10920;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 11130;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 11400;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 11610;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 11880;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 12090;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 12360;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 12560;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 12840;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 13040;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 13320;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 13520;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 13800;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 14000;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 14270;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 14480;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 14750;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 14960;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*730;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*730;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*671;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*199;
+        }
+        else if (kg>100) //
+        {
+            price = kg*198;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneP(kG) {
-  return (price = 0);
+function imFedexZoneP(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1270;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 1420;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 1680;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 1870;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 2140;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 2290;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 2480;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 2590;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 2780;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 2890;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 2970;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 3110;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 3310;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 3450;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 3660;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 3790;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 4000;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 4140;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 4340;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 4480;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 5730;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 5810;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 5970;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 6050;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 6210;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 6290;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 6450;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 6530;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 6690;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 6770;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 6930;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 7010;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 7170;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 7250;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 7410;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 7500;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 7650;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 7740;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 7890;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price =7980;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*426;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*426;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*418;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*414;
+        }
+        else if (kg>100) //
+        {
+            price = kg*398;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneQ(kG) {
-  return (price = 0);
+function imFedexZoneQ(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 980;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 1220;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 1430;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 1560;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 1770;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 1770;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 1940;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 2030;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 2190;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 2290;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 2360;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 2430;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 2560;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 2630;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 2760;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 2830;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 2970;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price =3030;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 3170;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 3240;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 3450;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 3470;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 3560;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 3580;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 3670;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 3690;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 3780;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 3800;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 3890;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 3910;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 3990;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 4010;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 4100;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 4120;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 4210;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 4230;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 4320;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 4340;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 4430;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 4450;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*283;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*283;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*266;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*235;
+        }
+        else if (kg>100) //
+        {
+            price = kg*234;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneS(kG) {
-  return (price = 0);
+function imFedexZoneS(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1190;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 1450;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 1720;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 1920;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 2200;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 2200;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 2380;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 2490;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 2670;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 2780;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 2850;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 2970;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 3160;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 3280;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price =3470;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 3590;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 3780;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 3900;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 4090;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 4210;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 5050;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 5130;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 5280;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 5370;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 5520;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 5600;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 5750;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 5840;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 5990;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 6070;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 6220;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 6310;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 6460;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 6540;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 6690;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 6780;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 6930;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 7010;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 7160;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 7250;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*339;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*339;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*339;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*332;
+        }
+        else if (kg>100) //
+        {
+            price = kg*315;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneT(kG) {
-  return (price = 0);
+function imFedexZoneT(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1490;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 1870;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 2200;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 2460;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 2800;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 3060;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 3290;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 3450;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 3680;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 3840;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 4260;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 4450;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 4710;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 4900;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 5160;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 5350;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 5610;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 5800;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 6060;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 6250;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 7690;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price =7830;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 8030;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 8170;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 8370;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 8500;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 8710;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 8840;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 9050;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 9180;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 9380;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 9520;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 9720;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 9860;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 10060;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 10190;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 10400;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 10530;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 10730;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 10870;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*428;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*428;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*423;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*411;
+        }
+        else if (kg>100) //
+        {
+            price = kg*410;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneU(kG) {
-  return (price = 0);
+function imFedexZoneU(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1630;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 2280;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 2670;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 3000;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 3390;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 3470;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 3720;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 3900;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 4150;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 4330;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 4420;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 4620;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 4890;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price =5090 ;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 5350;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price =5550 ;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price =5820;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 6020;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 6280;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 6480;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 6660;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 6780;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 6960;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 7080;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 7260;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 7370;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 7560;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 7670;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 7850;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 7970;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 8150;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 8270;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 8450;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 8560;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 8750;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 8860;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 9040;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 9160;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 9340;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 9460;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*610;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*610;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*560;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*540;
+        }
+        else if (kg>100) //
+        {
+            price = kg*522;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneV(kG) {
-  return (price = 0);
+function imFedexZoneV(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 880;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 1030;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 1220;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 1330;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 1520;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 1600;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 1760;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 1840;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 1990;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 2080;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 2620;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 2700;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 2840;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 2920;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 3060;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 3140;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 3280;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 3360;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 3500;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 3580;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 6280;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 6320;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 6430;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 6470;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 6580;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 6620;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 6730;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 6770;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 6880;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 6920;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 7030;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 7070;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 7180;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 7220;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 7330;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 7370;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 7480;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 7520;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 7630;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 7670;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*327;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*327;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*325;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*282;
+        }
+        else if (kg>100) //
+        {
+            price = kg*282;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneW(kG) {
-  return (price = 0);
+function imFedexZoneW(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1030;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 1400;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 1660;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 1860;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 2120;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 2180;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 2360;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 2470;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 2650;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 2760;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 3160;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 3290;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 3500;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price =3630;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 3840;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 3970;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price =4180;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 4310;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 4520;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 4650;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 6380;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 6490;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 6670;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 6780;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 6950;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 7060;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 7240;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 7350;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 7530;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 7640;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 7810;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 7920;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 8100;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 8210;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 8390;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 8500;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 8670;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 8780;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 8960;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 9070;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*465;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*465;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*448;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*443;
+        }
+        else if (kg>100) //
+        {
+            price = kg*406;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneX(kG) {
-  return (price = 0);
+function imFedexZoneX(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 970;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 1610;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 1910;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 2130;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price =2430;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 2580;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 2780;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 2910;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 3110;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 3240;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 3310;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 3460;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 3670;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 3810;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 4020;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 4170;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 4380;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 4520;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 4730;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 4880;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 5380;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 5470;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 5620;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 5710;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 5870;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 5960;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 6120;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 6210;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 6370;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 6460;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 6620;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 6700;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 6860;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 6950;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 7110;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 7200;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 7360;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 7450;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 7610;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 7700;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*320;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*320;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*315;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*306;
+        }
+        else if (kg>100) //
+        {
+            price = kg*305;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneY(kG) {
-  return (price = 0);
+function imFedexZoneY(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1160;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 1480;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 1720;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 1890;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 2130;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 2620;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 2830;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 2980;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 3190;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 3340;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price = 3520;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 3630;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 3800;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 3910;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 4090;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 4190;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 4370;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 4480;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 4650;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 4760;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 4830;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 4860;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 4960;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 4990;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 5090 ;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 5120;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 5210;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price = 5240;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 5340;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 5370;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 5470;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 5500;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 5600;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 5630;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 5730;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 5760;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 5860;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 5890;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 5990;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 6020;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*315;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*315;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*297;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*294;
+        }
+        else if (kg>100) //
+        {
+            price = kg*293;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
 }
-function imFedexZoneZ(kG) {
-  return (price = 0);
+function imFedexZoneZ(kG){
+  kg = kG;
+  
+  if(kg>0 && kg <= 0.5) //
+        {
+            price = 1340;
+        }
+        else if (kg>0.5 && kg <= 1) //
+        {
+            price = 1720;
+        }
+        else if (kg>1 && kg <=1.5 ) //
+        {
+            price = 2030;
+        }
+        else if (kg>1.5 && kg <=2 ) //
+        {
+            price = 2270;
+        }
+        else if (kg>2 && kg <=2.5 ) //
+        {
+            price = 2580;
+        }
+        else if (kg>2.5 && kg <=3 ) //
+        {
+            price = 2820;
+        }
+        else if (kg>3 && kg <=3.5 ) //
+        {
+            price = 3030;
+        }
+        else if (kg>3.5 && kg <=4 ) //
+        {
+            price = 3180;
+        }
+        else if (kg>4 && kg <=4.5 ) //
+        {
+            price = 3390;
+        }
+        else if (kg>4.5 && kg <=5 ) //
+        {
+            price = 3540;
+        }
+        else if (kg>5 && kg <=5.5 ) //
+        {
+            price =3730 ;
+        }
+        else if (kg>5.5 && kg <=6 ) //
+        {
+            price = 3900;
+        }
+        else if (kg>6 && kg <=6.5 ) //
+        {
+            price = 4130;
+        }
+        else if (kg>6.5 && kg <=7 ) //
+        {
+            price = 4290;
+        }
+        else if (kg>7 && kg <=7.5 ) //
+        {
+            price = 4530;
+        }
+        else if (kg>7.5 && kg <=8 ) //
+        {
+            price = 4690;
+        }
+        else if (kg>8 && kg <=8.5 ) //
+        {
+            price = 4920;
+        }
+        else if (kg>8.5 && kg <=9 ) //
+        {
+            price = 5090;
+        }
+        else if (kg>9 && kg <=9.5 ) //
+        {
+            price = 5320;
+        }
+        else if (kg>9.5 && kg <=10 ) //
+        {
+            price = 5480;
+        }
+        else if (kg>10 && kg <=10.5 ) //
+        {
+            price = 5600;
+        }
+        else if (kg>10.5 && kg <=11 ) //
+        {
+            price = 5700;
+        }
+        else if (kg>11 && kg <=11.5 ) //
+        {
+            price = 5860;
+        }
+        else if (kg>11.5 && kg <=12 ) //
+        {
+            price = 5950;
+        }
+        else if (kg>12 && kg <=12.5 ) //
+        {
+            price = 6110;
+        }
+        else if (kg>12.5 && kg <=13 ) //
+        {
+            price = 6210;
+        }
+        else if (kg>13 && kg <=13.5 ) //
+        {
+            price = 6370;
+        }
+        else if (kg>13.5 && kg <=14 ) //
+        {
+            price =6460 ;
+        }
+        else if (kg>14 && kg <=14.5 ) //
+        {
+            price = 6630;
+        }
+        else if (kg>14.5 && kg <=15 ) //
+        {
+            price = 6720;
+        }
+        else if (kg>15 && kg <=15.5 ) //
+        {
+            price = 6880;
+        }
+        else if (kg>15.5 && kg <=16 ) //
+        {
+            price = 6980;
+        }
+        else if (kg>16 && kg <=16.5 ) //
+        {
+            price = 7140;
+        }
+        else if (kg>16.5 && kg <=17 ) //
+        {
+            price = 7230;
+        }
+        else if (kg>17 && kg <=17.5 ) //
+        {
+            price = 7400;
+        }
+        else if (kg>17.5 && kg <=18 ) //
+        {
+            price = 7490;
+        }
+        else if (kg>18 && kg <=18.5 ) //
+        {
+            price = 7650;
+        }
+        else if (kg>18.5 && kg <=19 ) //
+        {
+            price = 7750;
+        }
+        else if (kg>19 && kg <=19.5 ) //
+        {
+            price = 7910;
+        }
+        else if (kg>19.5 && kg <=20 ) //
+        {
+            price = 8000;
+        }
+        else if (kg>20 && kg <=21 ) //
+        {
+            price = kg*446;
+        }
+        else if (kg>21 && kg <=45 ) //
+        {
+            price = kg*446;
+        }
+        else if (kg>45 && kg <=71 ) //
+        {
+            price = kg*429;
+        }
+        else if (kg>71 && kg <=100 ) //
+        {
+            price = kg*416;
+        }
+        else if (kg>100) //
+        {
+            price = kg*415;
+        }
+        else {
+            price = kg*0;
+        }
+    return price;
+
 }

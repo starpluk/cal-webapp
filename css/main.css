@@ -753,3 +753,18 @@ label {
 .boxinput {
     margin-left: 30px;
 }
+
+.priceInBox {
+    display: flex;
+}
+
+.priceBox {
+    display: blocklock;
+}
+
+.testt {
+    margin-left: 6px;
+    margin-top: 15px;
+    font-size: 5px;
+    color: red;
+}
