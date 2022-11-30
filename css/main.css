@@ -674,6 +674,11 @@ label {
     margin-left: -20px;
  }
 
+ .agentPicFedex {
+    width: 30%;
+    margin-left: -20px;
+ }
+
  .fedexPrice {
     margin-left: 20px;
  }
