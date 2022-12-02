@@ -297,7 +297,7 @@ body {
 .countryResult {
     margin-top: 2px;
     display: flex;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -763,13 +763,9 @@ label {
     display: flex;
 }
 
-.priceBox {
-    display: blocklock;
-}
-
-.testt {
-    margin-left: 6px;
-    margin-top: 15px;
-    font-size: 5px;
+.textOversize {
+    margin-left: -20px;
+    margin-top: 10px;
+    font-size: xx-small;
     color: red;
 }

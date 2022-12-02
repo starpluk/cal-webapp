@@ -49,7 +49,8 @@ function myFunction() {
   oversize = 2 * (widht + height) + 243;
 
   if (dimention > kg) {
-    KgTotal = dimention;
+    KgTotal = Math.ceil(dimention);
+    // KgTotal = dimention;
     if (oversize > 330) {
       textOversize =
         "*The product is oversize, Please contact us.";
@@ -1396,21 +1397,24 @@ function ReplaceIndex() {
 
 function ReplaceForm() {
   if (document.getElementById("rbtnFedex").checked == true) {
-    agentShip = "Fedex";
+    agentShip = "FedEx";
     priceTotal = sessionStorage.getItem("priceTotalFedex");
+    window.location.replace("form.html");
   } else if (document.getElementById("rbtnTnt").checked == true) {
     agentShip = "TNT";
     priceTotal = sessionStorage.getItem("priceTotalTNT");
+    window.location.replace("form.html");
   } else if (document.getElementById("rbtnUps").checked == true) {
     agentShip = "UPS";
     priceTotal = sessionStorage.getItem("priceTotalUPS");
+    window.location.replace("form.html");
   }
 
   console.log(priceTotal);
   sessionStorage.setItem("priceTotal", priceTotal);
   sessionStorage.setItem("agentShip", agentShip);
 
-  window.location.replace("form.html");
+  
 }
 
 function ReplaceResult() {
@@ -1537,7 +1541,7 @@ function getEnvironment() {
 //////// SEND MESSAGE ///////////
 /////////////////////////////////
 
-async function sendMsg() {
+/*async function sendMsg() {
   if (liff.getContext().type !== "none") {
     await liff.sendMessages([
       {
@@ -1548,134 +1552,134 @@ async function sendMsg() {
     ]);
     closed();
   }
-}
+}*/
 
-// async function sendMsg() {
-//   if (liff.getContext().type !== "none") {
-//     await liff.sendMessages([
-//       {
-//         "type": "flex",
-//         "altText": "Flex Message",
-//         "contents": {
-//           "type": "bubble",
-//           "direction": "ltr",
-//           "hero": {
-//             "type": "image",
-//             "url": "https://www.img.in.th/images/8101764dd39238f4e26d8110cd237fae.png",
-//             "size": "full",
-//             "aspectRatio": "1.51:1",
-//             "aspectMode": "fit"
-//           },
-//           "body": {
-//             "type": "box",
-//             "layout": "vertical",
-//             "contents": [
-//               {
-//                 "type": "text",
-//                 "text": "คำนวณค่าขนส่ง",
-//                 "weight": "bold",
-//                 "size": "lg",
-//                 "align": "center",
-//                 "contents": []
-//               },
-//               {
-//                 "type": "box",
-//                 "layout": "horizontal",
-//                 "margin": "lg",
-//                 "contents": [
-//                   {
-//                     "type": "text",
-//                     "text": "Shipping : ",
-//                     "weight": "bold",
-//                     "contents": []
-//                   },
-//                   {
-//                     "type": "text",
-//                     "text": ""+shipping,
-//                     "align": "end",
-//                     "contents": []
-//                   }
-//                 ]
-//               },
-//               {
-//                 "type": "box",
-//                 "layout": "horizontal",
-//                 "contents": [
-//                   {
-//                     "type": "text",
-//                     "text": "Country : ",
-//                     "weight": "bold",
-//                     "contents": []
-//                   },
-//                   {
-//                     "type": "text",
-//                     "text": ""+country_1,
-//                     "align": "end",
-//                     "contents": []
-//                   }
-//                 ]
-//               },
-//               {
-//                 "type": "box",
-//                 "layout": "horizontal",
-//                 "contents": [
-//                   {
-//                     "type": "text",
-//                     "text": "น้ำหนัก :",
-//                     "weight": "bold",
-//                     "contents": []
-//                   },
-//                   {
-//                     "type": "text",
-//                     "text": KgTotal+" Kg.",
-//                     "align": "end",
-//                     "contents": []
-//                   }
-//                 ]
-//               },
-//               {
-//                 "type": "box",
-//                 "layout": "horizontal",
-//                 "margin": "lg",
-//                 "contents": [
-//                   {
-//                     "type": "text",
-//                     "text": ""+priceTotal,
-//                     "weight": "bold",
-//                     "size": "xxl",
-//                     "color": "#229104FF",
-//                     "align": "center",
-//                     "margin": "none",
-//                     "contents": []
-//                   },
-//                   {
-//                     "type": "text",
-//                     "text": "Bath",
-//                     "weight": "bold",
-//                     "align": "end",
-//                     "gravity": "center",
-//                     "margin": "none",
-//                     "contents": []
-//                   }
-//                 ]
-//               },
-//               {
-//                 "type": "text",
-//                 "text": "*ราคาค่าขนส่งคำนวณจาก"+status_1,
-//                 "size": "xs",
-//                 "color": "#777777FF",
-//                 "align": "center",
-//                 "margin": "lg",
-//                 "contents": []
-//               }
-//             ]
-//           }
-//         }
-//       }
-//     ]);
-//     closed();
-//   }
-// }
+async function sendMsg() {
+  if (liff.getContext().type !== "none") {
+    await liff.sendMessages([
+      {
+        "type": "flex",
+        "altText": "Flex Message",
+        "contents": {
+          "type": "bubble",
+          "direction": "ltr",
+          "hero": {
+            "type": "image",
+            "url": "https://www.img.in.th/images/8101764dd39238f4e26d8110cd237fae.png",
+           "size": "full",
+            "aspectRatio": "1.51:1",
+           "aspectMode": "fit"
+          },
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+               "type": "text",
+                "text": "คำนวณค่าขนส่ง",
+                "weight": "bold",
+                "size": "lg",
+                "align": "center",
+               "contents": []
+              },
+              {
+                "type": "box",
+               "layout": "horizontal",
+                "margin": "lg",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "Shipping : ",
+                    "weight": "bold",
+                    "contents": []
+                  },
+                  {
+                    "type": "text",
+                    "text": ""+shipping,
+                    "align": "end",
+                    "contents": []
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "Country : ",
+                    "weight": "bold",
+                    "contents": []
+                  },
+                  {
+                    "type": "text",
+                    "text": ""+country_1,
+                    "align": "end",
+                    "contents": []
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "น้ำหนัก :",
+                    "weight": "bold",
+                    "contents": []
+                   },
+                  {
+                   "type": "text",
+                    "text": KgTotal+" Kg.",
+                    "align": "end",
+                    "contents": []
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "margin": "lg",
+                "contents": [
+                 {
+                    "type": "text",
+                    "text": ""+priceTotal,
+                    "weight": "bold",
+                    "size": "xxl",
+                    "color": "#229104FF",
+                    "align": "center",
+                    "margin": "none",
+                    "contents": []
+                  },
+                  {
+                    "type": "text",
+                    "text": "Bath",
+                    "weight": "bold",
+                    "align": "end",
+                    "gravity": "center",
+                    "margin": "none",
+                    "contents": []
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "*ราคาค่าขนส่งคำนวณจาก"+status_1,
+                "size": "xs",
+                "color": "#777777FF",
+                "align": "center",
+                "margin": "lg",
+                "contents": []
+              }
+           ]
+          }
+        }
+      }
+    ]);
+    closed();
+  }
+}
 
 ////////////////////////////////////////////
 /////////////////// UPS ////////////////////
