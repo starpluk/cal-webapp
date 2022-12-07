@@ -77,15 +77,19 @@
     
 }
 
+.slectcountry {
+    /* padding: 15px 50px; */
+}
+
 select {
-    padding: 12px 70px;
-    width: 80%;
-  margin: 8px 0;
+    padding: 12px 35px;
+    width: 100%;
+  margin: 10px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 12px;
   box-sizing: border-box;
-    margin-left: 0px;
+    margin-left: 32px;
     color: #ADA4A5;
     /* icon */
   background: url('https://sv1.img.in.th/StsLY.png') no-repeat left;
@@ -291,13 +295,12 @@ body {
     display: flex;
     font-size: 15px;
     font-weight: medium;
-    margin-left: -30px; 
+    margin-left: -31px; 
 }
 
 .countryResult {
     margin-top: 2px;
     display: flex;
-    font-size: 15px;
     font-weight: bold;
 }
 
@@ -417,6 +420,13 @@ button:hover .RSP1,.RSP2,.RSP3 {
    transform: translateY(0);
   }
 
+.button_form {
+    margin-left: -25px;
+}
+
+#btnForm {
+    margin-left: -20px;
+}
 
 
 .Bath {

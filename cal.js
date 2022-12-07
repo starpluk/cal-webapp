@@ -25,13 +25,8 @@ var textOversize = "";
 
 //TEST UI//
 function testUI() {
-  if (document.getElementById("export").checked == true) {
-    window.location.replace("resultEXPORT.html");
-  } else if (document.getElementById("import").checked == true) {
-    window.location.replace("resultIMPORT.html");
-  } else {
-    alert("Plese Select Shipping Type");
-  }
+  country_1 = sessionStorage.getItem("countryResult");
+ console.log(country_1);
 }
 
 function myFunction() {
@@ -54,9 +49,10 @@ function myFunction() {
     if (oversize > 330) {
       textOversize =
         "*The product is oversize, Please contact us.";
-    } else {
-      textOversize = "";
-    }
+    } 
+     else {
+       textOversize = "";
+     }
     status = "Dimention";
   } else if (kg > dimention) {
     KgTotal = kg;
@@ -348,7 +344,7 @@ function myFunction() {
       fedexIM = imFedexZoneG(KgTotal);
       tntIM = imTNTZone8(KgTotal);
       break;
-    case "Bosnia-herzegovina":
+    case "Bosnia":
       fedexEX = exFedexZoneG(KgTotal);
       tntEX = exTNTZone8(KgTotal);
       upsEX = exUPSZone2(KgTotal);
@@ -1366,7 +1362,7 @@ function myFunction() {
 
   sessionStorage.setItem("weightKG", kg);
   sessionStorage.setItem("resultText", text);
-  sessionStorage.setItem("countryResult", country_1);
+  sessionStorage.setItem("countryResult", country);
   sessionStorage.setItem("shippingResult", shipping);
   sessionStorage.setItem("Status", status);
   sessionStorage.setItem("priceTotalFedex", priceTotalFedex);
@@ -1408,17 +1404,29 @@ function ReplaceForm() {
     agentShip = "UPS";
     priceTotal = sessionStorage.getItem("priceTotalUPS");
     window.location.replace("form.html");
+    console.log(priceTotal);
   }
 
-  console.log(priceTotal);
+  
   sessionStorage.setItem("priceTotal", priceTotal);
   sessionStorage.setItem("agentShip", agentShip);
-
+  console.log(priceTotal);
   
 }
 
 function ReplaceResult() {
-  window.location.replace("cardCheckBox.html");
+
+  country_1 = sessionStorage.getItem("countryResult");
+
+    if(country_1=="Australia"||country_1=="Austria"||country_1=="Belgium"||country_1=="Denmark"||country_1=="Finland"
+    ||country_1=="France"||country_1=="Germany"||country_1=="Iceland"||country_1=="Italy"||country_1=="Japan"||country_1=="Netherlands"
+    ||country_1=="New Zealand"||country_1=="Norway"||country_1=="Spain"||country_1=="Sweden"||country_1=="Switzerland"
+    ||country_1=="United Kingdom"||country_1=="Usa")
+    {
+      window.location.replace("resultEXportUPS.html");
+    }
+    else{window.location.replace("resultEXPORT.html");
+   }
 }
 
 function addCommas(nStr) {

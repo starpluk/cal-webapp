@@ -27,36 +27,36 @@
       <div class="infoCal">
 
         <div class="shipping">
-          Shipping type :  &nbsp;
+          Shipping type : &nbsp;
           <div class="shippingResult"> Import </div>
         </div>
 
         <div class="country">
-            Country :  &nbsp;
-            <div class="countryResult"> Australia </div>
-          </div>
-          
-        
-  
+          Country : &nbsp;
+          <div class="countryResult"> Australia </div>
+        </div>
+
+
+
         <div class="weightResult">
           Weight : &nbsp;
           <div class="weightKG"> 20 </div>
           <div class="KGtext">&nbsp;Kg</div>
-  
+
         </div>
 
       </div>
 
-      <div class="infoShippingtype"> 
-        <img class="iconAirplane" src="img/take-off.png" > 
+      <div class="infoShippingtype">
+        <img class="iconAirplane" src="img/take-off.png">
 
         <div class="textinfoshippping">
-          <div class="textInfoShipping_1">Air Courier (DAP)</div> 
+          <div class="textInfoShipping_1">Air Courier (DAP)</div>
           <div class="textInfoShipping_2">Door To Door</div>
         </div>
-        
+
       </div>
-      
+
 
 
       <div class="col-md-4 col-lg-4 col-sm-4">
@@ -67,7 +67,7 @@
           <div class="panel panel-default card-input">
 
             <div class="panel-body">
-              
+
 
               <div class="priceBox">
                 <div class="priceInBox">
@@ -75,9 +75,9 @@
                   <div class="fedexPrice" id="fedexPrice">12,000</div>
                   <p class="currentBath">Baht</p>
                 </div>
-                <div class="textOversize">*The product is oversize,Please contact us.</div>
+                <div class="textOversize"></div>
               </div>
-              
+
 
             </div>
           </div>
@@ -93,9 +93,9 @@
           <input type="radio" id="rbtnTnt" name="agent" value="tnt" class="card-input-element" />
 
           <div class="panel panel-default card-input">
-            
+
             <div class="panel-body">
-              
+
 
               <div class="priceBox">
                 <div class="priceInBox">
@@ -106,7 +106,7 @@
                 <div class="textOversize">*The product is oversize, Please contact us.</div>
               </div>
             </div>
-            
+
           </div>
         </label>
 
@@ -120,7 +120,7 @@
           <div class="panel panel-default card-input">
 
             <div class="panel-body">
-              
+
 
               <div class="priceBox">
                 <div class="priceInBox">
@@ -136,9 +136,9 @@
 
       </div>
 
-    
-      
-      
+
+
+
     </div>
 
 
@@ -164,17 +164,17 @@
     $(document).ready(function () {
 
       // get value from storage
-    $(".resultText").html(sessionStorage.getItem("resultText"));
-    $(".countryResult").html(sessionStorage.getItem("countryResult"));
-    $(".shippingResult").html(sessionStorage.getItem("shippingResult"));
-    $(".Status").html(sessionStorage.getItem("Status"));
-    $(".weightKG").html(sessionStorage.getItem("weightKG"));
+      $(".resultText").html(sessionStorage.getItem("resultText"));
+      $(".countryResult").html(sessionStorage.getItem("countryResult"));
+      $(".shippingResult").html(sessionStorage.getItem("shippingResult"));
+      $(".Status").html(sessionStorage.getItem("Status"));
+      $(".weightKG").html(sessionStorage.getItem("weightKG"));
 
-    $(".fedexPrice").html(sessionStorage.getItem("priceTotalFedex"));
-    $(".tntPrice").html(sessionStorage.getItem("priceTotalTNT"));
-    $(".upsPrice").html(sessionStorage.getItem("priceTotalUPS"));
-    $(".textOversize").html(sessionStorage.getItem("textOversize"));
-      
+      $(".fedexPrice").html(sessionStorage.getItem("priceTotalFedex"));
+      $(".tntPrice").html(sessionStorage.getItem("priceTotalTNT"));
+      $(".upsPrice").html(sessionStorage.getItem("priceTotalUPS"));
+      $(".textOversize").html(sessionStorage.getItem("textOversize"));
+
       // button click
       // $("#btnClear").click(function(){		
       //     localStorage.removeItem("sName");
