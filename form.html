@@ -74,7 +74,7 @@
     
     
                     <span class="input__label_2">Tel.</span> <br>
-                    <input class="input__field_2" id="input__field_2" name="เบอร์โทร" type="text" placeholder="" />
+                    <input class="input__field_2" id="input__field_2" name="เบอร์โทร" inputmode="decimal" pattern="[0-9]*" type="text" placeholder="" />
     
     
                     <!-- <label class="input_3">
@@ -123,7 +123,7 @@
         <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
         
 
-    <!-- <script>
+    <script>
         async function main() {
             liff.ready.then(() => {
                 document.getElementById("isLoggedIn").append(liff.isLoggedIn());
@@ -140,7 +140,7 @@
             await liff.init({ liffId: "1657243570-NkrPBqrJ" });
         }
         main()
-    </script> -->
+    </script>
 
 
 

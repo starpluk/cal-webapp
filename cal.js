@@ -17,11 +17,16 @@ var priceLIFF = "",
   nameLIFF = "",
   telLIFF = "",
   emailLIFF = "",
-  typeproductLIFF = "";
+  typeproductLIFF = "",
+  agentLIFF = "",
+  shippingLIFF = "",
+  countryLIFF = "",
+  weightLIFF = "";
 var agentShip = "";
 var priceTotalFedex, priceTotalTNT, priceTotalUPS;
 var priceTempFedex, priceTempTNT, priceTempUPS;
 var textOversize = "";
+var origin="Thailand",destination="Thailand";
 
 //TEST UI//
 function testUI() {
@@ -1549,20 +1554,44 @@ function getEnvironment() {
 //////// SEND MESSAGE ///////////
 /////////////////////////////////
 
-/*async function sendMsg() {
+async function sendMsg() {
+
+  shippingLIFF = sessionStorage.getItem("shippingResult")
+  agentLIFF = sessionStorage.getItem("agentShip")
+  countryLIFF = sessionStorage.getItem("countryResult")
+  weightLIFF = sessionStorage.getItem("weightKG")
+  priceLIFF = sessionStorage.getItem("priceTotal", priceTotal);
+  nameLIFF = document.getElementById("input__field_1").value;
+  telLIFF = document.getElementById("input__field_2").value;
+  emailLIFF = document.getElementById("input__field_3").value;
+  typeproductLIFF = document.getElementById("input__field_4").value;
+
+  if(shippingLIFF == "Export"){
+    destination = countryLIFF;
+  }
+  else {
+    origin = countryLIFF;
+  }
+
   if (liff.getContext().type !== "none") {
     await liff.sendMessages([
       {
-        type: "text",
-        text: "Heloooo"
-        // text: "ประเภทการขนส่ง : ส่งออก\nเอเจนท์ : Fedex\n\nประเทศต้นทาง : Thailand\nประเทศปลายทาง : Australia\n\nน้ำหนัก : 12 KG.\n\nประเภทสินค้า : Coffee\n\nราคาคำนวนเบื้องต้น : 5,868 บาท\n\nชื่อผู้ส่ง : Pluk Rich\nเบอร์โทร : 0805044440\nE-mail : Pluk@gmail.com",
+        "type": "text",
+        "text": "ประเภทการขนส่ง : "+shippingLIFF+
+        "\nเอเจนท์ : "+agentLIFF+
+        "\n\nประเทศต้นทาง : "+origin+
+        "\nประเทศปลายทาง : "+destination+
+        "\n\nน้ำหนัก : "+weightLIFF+" Kg.\n\nประเภทสินค้า : "+typeproductLIFF+
+        "\n\nราคาคำนวนเบื้องต้น : "+priceLIFF+" บาท\n\nชื่อผู้ส่ง : "+nameLIFF+
+        "\nเบอร์โทร : "+telLIFF+
+        "\nE-mail : "+emailLIFF
       },
     ]);
     closed();
   }
-}*/
+}
 
-async function sendMsg() {
+/*async function sendMsg() {
   if (liff.getContext().type !== "none") {
     await liff.sendMessages([
       {
@@ -1687,7 +1716,7 @@ async function sendMsg() {
     ]);
     closed();
   }
-}
+}*/
 
 ////////////////////////////////////////////
 /////////////////// UPS ////////////////////
