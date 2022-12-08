@@ -1577,14 +1577,7 @@ async function sendMsg() {
     await liff.sendMessages([
       {
         "type": "text",
-        "text": "ประเภทการขนส่ง : "+shippingLIFF+
-        "\nเอเจนท์ : "+agentLIFF+
-        "\n\nประเทศต้นทาง : "+origin+
-        "\nประเทศปลายทาง : "+destination+
-        "\n\nน้ำหนัก : "+weightLIFF+" Kg.\n\nประเภทสินค้า : "+typeproductLIFF+
-        "\n\nราคาคำนวนเบื้องต้น : "+priceLIFF+" บาท\n\nชื่อผู้ส่ง : "+nameLIFF+
-        "\nเบอร์โทร : "+telLIFF+
-        "\nE-mail : "+emailLIFF
+        "text": "ประเภทการขนส่ง : **\nเอเจนท์ : **\n\nประเทศต้นทาง : **\nประเทศปลายทาง : **\n\nน้ำหนัก : ** Kg.\n\nประเภทสินค้า : **\n\nราคาคำนวนเบื้องต้น : ** บาท\n\nชื่อผู้ส่ง : **\nเบอร์โทร : **\nE-mail : **"
       },
     ]);
     closed();
