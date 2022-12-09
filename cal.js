@@ -26,7 +26,7 @@ var agentShip = "";
 var priceTotalFedex, priceTotalTNT, priceTotalUPS;
 var priceTempFedex, priceTempTNT, priceTempUPS;
 var textOversize = "";
-var booOversize = false;
+var booOversize = "false";
 var origin="Thailand",destination="Thailand";
 
 //TEST UI//
@@ -53,7 +53,7 @@ function myFunction() {
     KgTotal = Math.ceil(dimention);
     // KgTotal = dimention;
     if (oversize > 330) {
-      booOversize = true;
+      booOversize = "true";
       textOversize =
         "*The product is oversize, Please contact us.";
     } 
@@ -1577,7 +1577,7 @@ async function sendMsg() {
     origin = countryLIFF;
   }
 
-  if(booOversize == true){
+  if(booOversize == "true"){
 
     if (liff.getContext().type !== "none") {
       await liff.sendMessages([
@@ -1598,7 +1598,7 @@ async function sendMsg() {
 
   }
 
-  else if (booOversize == false)
+  else if (booOversize == "false")
   {
 
     if (liff.getContext().type !== "none") {
