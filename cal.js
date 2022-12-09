@@ -1376,6 +1376,7 @@ function myFunction() {
   sessionStorage.setItem("priceTotalTNT", priceTotalTNT);
   sessionStorage.setItem("priceTotalUPS", priceTotalUPS);
   sessionStorage.setItem("textOversize",textOversize);
+  sessionStorage.setItem("booOversize",booOversize);
 
   if (document.getElementById("export").checked == true) {
     if(country=="Australia"||country=="Austria"||country=="Belgium"||country=="Denmark"||country=="Finland"
@@ -1567,6 +1568,7 @@ async function sendMsg() {
   telLIFF = document.getElementById("input__field_2").value;
   emailLIFF = document.getElementById("input__field_3").value;
   typeproductLIFF = document.getElementById("input__field_4").value;
+  booOversize = sessionStorage.getItem("booOversize")
 
   if(shippingLIFF == "Export"){
     destination = countryLIFF;
