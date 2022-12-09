@@ -1577,7 +1577,7 @@ async function sendMsg() {
     origin = countryLIFF;
   }
 
-  if(booOversize == "true"){
+  
 
     if (liff.getContext().type !== "none") {
       await liff.sendMessages([
@@ -1595,32 +1595,6 @@ async function sendMsg() {
       ]);
       closed();
     }
-
-  }
-
-  else if (booOversize == "false")
-  {
-
-    if (liff.getContext().type !== "none") {
-      await liff.sendMessages([
-        {
-          "type": "text",
-          "text": "ประเภทการขนส่ง : "+shippingLIFF+
-          "\nเอเจนท์ : "+agentLIFF+
-          "\n\nประเทศต้นทาง : "+origin+
-          "\nประเทศปลายทาง : "+destination+
-          "\n\nน้ำหนัก : "+weightLIFF+" Kg.\n\nประเภทสินค้า : "+typeproductLIFF+
-          "\n\nราคาคำนวนเบื้องต้น : "+priceLIFF+" บาท\n\nชื่อผู้ส่ง : "+nameLIFF+
-          "\nเบอร์โทร : "+telLIFF+
-          "\nE-mail : "+emailLIFF
-        },
-      ]);
-      closed();
-    }
-
-  }
-
-  
 }
 
 /*async function sendMsg() {
