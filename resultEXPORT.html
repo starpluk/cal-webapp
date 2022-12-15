@@ -45,6 +45,13 @@
   
         </div>
 
+        <div class="weightResult">
+          DimWeight : &nbsp;
+          <div class="dimWeight"> 20 </div>
+          <div class="KGtext">&nbsp;Kg</div>
+
+        </div>
+
       </div>
 
       <div class="infoShippingtype"> 
@@ -149,7 +156,8 @@
     $(".tntPrice").html(sessionStorage.getItem("priceTotalTNT"));
     $(".upsPrice").html(sessionStorage.getItem("priceTotalUPS"));
     $(".textOversize").html(sessionStorage.getItem("textOversize"));
-      
+    $(".dimWeight").html(sessionStorage.getItem("dimWeight"));
+ 
       // button click
       // $("#btnClear").click(function(){		
       //     localStorage.removeItem("sName");

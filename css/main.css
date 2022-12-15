@@ -338,6 +338,10 @@ body {
     font-weight: bold;
 }
 
+.dimWeight {
+    font-weight: bold;
+}
+
 .KGtext {
     font-weight: bold;
 }
@@ -776,6 +780,13 @@ label {
 }
 
 .textOversize {
+    margin-left: -20px;
+    margin-top: 10px;
+    font-size: xx-small;
+    color: red;
+}
+
+.textOversizeUPS {
     margin-left: -20px;
     margin-top: 10px;
     font-size: xx-small;

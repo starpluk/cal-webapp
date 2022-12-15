@@ -45,6 +45,13 @@
 
         </div>
 
+        <div class="weightResult">
+          DimWeight : &nbsp;
+          <div class="dimWeight"> 20 </div>
+          <div class="KGtext">&nbsp;Kg</div>
+
+        </div>
+
       </div>
 
       <div class="infoShippingtype">
@@ -128,7 +135,7 @@
                   <div class="upsPrice" id="upsPrice">12000</div>
                   <p class="currentBath">Baht</p>
                 </div>
-                <div class="textOversize">*The product is oversize, Please contact us.</div>
+                <div class="textOversizeUPS">*The product is oversize, Please contact us.</div>
               </div>
             </div>
           </div>
@@ -174,6 +181,8 @@
       $(".tntPrice").html(sessionStorage.getItem("priceTotalTNT"));
       $(".upsPrice").html(sessionStorage.getItem("priceTotalUPS"));
       $(".textOversize").html(sessionStorage.getItem("textOversize"));
+      $(".textOversizeUPS").html(sessionStorage.getItem("textOversizeUPS"));
+      $(".dimWeight").html(sessionStorage.getItem("dimWeight"));
 
       // button click
       // $("#btnClear").click(function(){		

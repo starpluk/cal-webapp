@@ -1,4 +1,4 @@
-var country, weightKG, widht, lenght, height, kg, dimention, oversize;
+var country, weightKG, widht, lenght, height, kg, dimention, oversize, dimentionCeil;
 var valurRate,
   text,
   exim,
@@ -28,12 +28,164 @@ var priceTempFedex, priceTempTNT, priceTempUPS;
 var textOversize = "";
 var booOversize = "false";
 var origin="Thailand",destination="Thailand";
+var dimentionArray = [];
+var x=0,y=0,z=0;
+var girth;
+var dimWeight = "";
 
-//TEST UI//
-function testUI() {
-  country_1 = sessionStorage.getItem("countryResult");
- console.log(country_1);
+function testArray() {
+  widht = document.getElementById("width").value;
+  lenght = document.getElementById("lenght").value;
+  height = document.getElementById("height").value;
+  
+  dimentionArray[0] = widht;
+  dimentionArray[1] = lenght;
+  dimentionArray[2] = height;
+  
+  dimentionArray.sort((a, b) => b - a);
+  dimentionArray = dimentionArray.map(Number);
+  
+  x = dimentionArray[0];
+  y = dimentionArray[1];
+  z = dimentionArray[2];
+  girth = (y+z)*2;
+  
+  console.log(dimentionArray)
+  
+  console.log(x);
+  console.log(y);
+  console.log(z);
+  console.log(x+girth);
+
 }
+
+function oversizeFedEx(OSweight) {
+  widht = document.getElementById("width").value;
+  lenght = document.getElementById("lenght").value;
+  height = document.getElementById("height").value;
+  
+  dimentionArray[0] = widht;
+  dimentionArray[1] = lenght;
+  dimentionArray[2] = height;
+  
+  dimentionArray.sort((a, b) => b - a);
+  dimentionArray = dimentionArray.map(Number);
+  
+  x = dimentionArray[0];
+  y = dimentionArray[1];
+  z = dimentionArray[2];
+  girth = (y+z)*2;
+  
+  console.log(dimentionArray)
+  
+  console.log(x);
+  console.log(y);
+  console.log(z);
+  console.log(x+girth);
+if(x < 243)
+{
+  if(OSweight > 30){
+    if(x <= 240 && (y <= 150) && (z <= 120)){
+      console.log("loop_1");
+       {
+         if((x+girth) < 330)
+        {
+          console.log("loop_2");
+          textOversize ="";
+        }
+         else {
+          console.log("loop_3");
+          textOversize ="*The product is oversize, Please contact us.";
+        }
+       }
+      }
+      else {textOversize ="*The product is oversize, Please contact us.";}
+  }
+  else if (OSweight <= 30) {
+    if(x <= 120 && (y <= 70) && (z <= 50))
+       {
+  
+         if((x+girth) < 330)
+        {
+          console.log("loop_2");
+          textOversize ="";
+        }
+         else 
+        {
+          console.log("loop_3");
+          textOversize ="*The product is oversize, Please contact us.";
+        }
+       }
+    else {textOversize ="*The product is oversize, Please contact us.";}
+  }     
+}
+else {
+  textOversize ="*The product is oversize, Please contact us.";
+}
+}
+function oversizeUPS(OSweight) {
+  widht = document.getElementById("width").value;
+  lenght = document.getElementById("lenght").value;
+  height = document.getElementById("height").value;
+  
+  dimentionArray[0] = widht;
+  dimentionArray[1] = lenght;
+  dimentionArray[2] = height;
+  
+  dimentionArray.sort((a, b) => b - a);
+  dimentionArray = dimentionArray.map(Number);
+  
+  x = dimentionArray[0];
+  y = dimentionArray[1];
+  z = dimentionArray[2];
+  girth = (y+z)*2;
+  
+  console.log(dimentionArray)
+  
+  console.log(x);
+  console.log(y);
+  console.log(z);
+  console.log(x+girth);
+  if(OSweight > 40){
+    if(x <= 274){
+      console.log("loop_1");
+       {
+         if((x+girth) < 300)
+        {
+          console.log("loop_2");
+          textOversizeUPS ="";
+        }
+         else {
+          console.log("loop_3");
+          textOversizeUPS ="*The product is oversize, Please contact us.";
+        }
+       }
+      }
+      else {textOversizeUPS ="*The product is oversize, Please contact us.";}
+  }
+  else if (OSweight <= 40) {
+    if(x <= 274)
+       {
+  
+         if((x+girth) < 300)
+        {
+          console.log("loop_2");
+          textOversizeUPS ="";
+        }
+         else 
+        {
+          console.log("loop_3");
+          textOversizeUPS ="*The product is oversize, Please contact us.";
+        }
+       }
+    else {textOversizeUPS ="*The product is oversize, Please contact us.";}
+  }     
+
+else {
+  textOversizeUPS ="*The product is oversize, Please contact us.";
+}
+}
+
 
 function myFunction() {
   var status;
@@ -47,28 +199,26 @@ function myFunction() {
   country_1 = country;
   kg = weightKG;
   dimention = (widht * lenght * height) / 5000;
-  oversize = 2 * (widht + height) + 243;
-
+  dimentionCeil = Math.ceil(dimention/0.5)*0.5;
+  
+  
   if (dimention > kg) {
-    KgTotal = Math.ceil(dimention);
+    KgTotal = Math.ceil(kg/0.5)*0.5;
+    dimWeight = dimentionCeil;
     // KgTotal = dimention;
-    if (oversize > 330) {
-      booOversize = "true";
-      textOversize =
-        "*The product is oversize, Please contact us.";
-    } 
-     else {
-       textOversize = "";
-     }
-    status = "Dimention";
   } else if (kg > dimention) {
-    KgTotal = kg;
+    KgTotal = Math.ceil(kg/0.5)*0.5;
+    dimWeight = "-";
     // valurRate = KgTotal * 1500;
     // text = valurRate;
     status = "น้ำหนัก Kg.";
   } else {
     text = "";
   }
+
+  oversizeFedEx(KgTotal);
+  oversizeUPS(KgTotal);
+  
 
   switch (country) {
     case "Macau":
@@ -1376,7 +1526,9 @@ function myFunction() {
   sessionStorage.setItem("priceTotalTNT", priceTotalTNT);
   sessionStorage.setItem("priceTotalUPS", priceTotalUPS);
   sessionStorage.setItem("textOversize",textOversize);
+  sessionStorage.setItem("textOversizeUPS",textOversizeUPS);
   sessionStorage.setItem("booOversize",booOversize);
+  sessionStorage.setItem("dimWeight",dimWeight);
 
   if (document.getElementById("export").checked == true) {
     if(country=="Australia"||country=="Austria"||country=="Belgium"||country=="Denmark"||country=="Finland"
@@ -1384,6 +1536,7 @@ function myFunction() {
     ||country=="New Zealand"||country=="Norway"||country=="Spain"||country=="Sweden"||country=="Switzerland"
     ||country=="United Kingdom"||country=="Usa"){
       window.location.replace("resultEXportUPS.html");
+      
     }
     else{window.location.replace("resultEXPORT.html");}
     
@@ -1583,13 +1736,13 @@ async function sendMsg() {
       await liff.sendMessages([
         {
           "type": "text",
-          "text": "ประเภทการขนส่ง : "+shippingLIFF+
-          "\nเอเจนท์ : "+agentLIFF+
-          "\n\nประเทศต้นทาง : "+origin+
-          "\nประเทศปลายทาง : "+destination+
-          "\n\nน้ำหนัก : "+weightLIFF+" Kg.\n\nประเภทสินค้า : "+typeproductLIFF+
-          "\n\nราคาคำนวนเบื้องต้น : "+priceLIFF+" บาท\n\nชื่อผู้ส่ง : "+nameLIFF+
-          "\nเบอร์โทร : "+telLIFF+
+          "text": "Service Type : "+shippingLIFF+
+          "\nAgent : "+agentLIFF+
+          "\n\nOrigin Country : "+origin+
+          "\nDestination Country : "+destination+
+          "\n\nWeight : "+weightLIFF+" Kg.\n\nProduct Type : "+typeproductLIFF+
+          "\n\nEST.Price : "+priceLIFF+" บาท\n\nContact Name : "+nameLIFF+
+          "\nPhone Number : "+telLIFF+
           "\nE-mail : "+emailLIFF+"\n\nTerm & Condition :\n\n📌 Rate Include\n- Vat 7%\n- Insurance 2% of Product Value + Freight Charge\n📌 Rate Exclude\n- Local Delivery from Origin\n- Remote Area (If Any)\n- Import Duty & Tax at Destination (If Any)\n- In case of being inspected, the product may be bounced or destroyed, Depending on the consideration of the destination customs department. (If Any)\n\n📌📦The higher weight between Actual Weight [kg] and Dimension Weight [Width (cm) x Length (cm) x Height (cm) / 5,000] will be used to calculate shipping rate. "
         },
       ]);
@@ -1597,132 +1750,7 @@ async function sendMsg() {
     }
 }
 
-/*async function sendMsg() {
-  if (liff.getContext().type !== "none") {
-    await liff.sendMessages([
-      {
-        "type": "flex",
-        "altText": "Flex Message",
-        "contents": {
-          "type": "bubble",
-          "direction": "ltr",
-          "hero": {
-            "type": "image",
-            "url": "https://www.img.in.th/images/8101764dd39238f4e26d8110cd237fae.png",
-           "size": "full",
-            "aspectRatio": "1.51:1",
-           "aspectMode": "fit"
-          },
-          "body": {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-               "type": "text",
-                "text": "คำนวณค่าขนส่ง",
-                "weight": "bold",
-                "size": "lg",
-                "align": "center",
-               "contents": []
-              },
-              {
-                "type": "box",
-               "layout": "horizontal",
-                "margin": "lg",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "Shipping : ",
-                    "weight": "bold",
-                    "contents": []
-                  },
-                  {
-                    "type": "text",
-                    "text": ""+shipping,
-                    "align": "end",
-                    "contents": []
-                  }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "Country : ",
-                    "weight": "bold",
-                    "contents": []
-                  },
-                  {
-                    "type": "text",
-                    "text": ""+country_1,
-                    "align": "end",
-                    "contents": []
-                  }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "horizontal",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "น้ำหนัก :",
-                    "weight": "bold",
-                    "contents": []
-                   },
-                  {
-                   "type": "text",
-                    "text": KgTotal+" Kg.",
-                    "align": "end",
-                    "contents": []
-                  }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "horizontal",
-                "margin": "lg",
-                "contents": [
-                 {
-                    "type": "text",
-                    "text": ""+priceTotal,
-                    "weight": "bold",
-                    "size": "xxl",
-                    "color": "#229104FF",
-                    "align": "center",
-                    "margin": "none",
-                    "contents": []
-                  },
-                  {
-                    "type": "text",
-                    "text": "Bath",
-                    "weight": "bold",
-                    "align": "end",
-                    "gravity": "center",
-                    "margin": "none",
-                    "contents": []
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "text": "*ราคาค่าขนส่งคำนวณจาก"+status_1,
-                "size": "xs",
-                "color": "#777777FF",
-                "align": "center",
-                "margin": "lg",
-                "contents": []
-              }
-           ]
-          }
-        }
-      }
-    ]);
-    closed();
-  }
-}*/
+
 
 ////////////////////////////////////////////
 /////////////////// UPS ////////////////////
